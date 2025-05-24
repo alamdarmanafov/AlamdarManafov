@@ -7,11 +7,14 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { useInView } from "framer-motion"
 import { Send, Mail, Phone, MapPin } from "lucide-react"
 import emailjs from "@emailjs/browser"
+import { useLanguage } from "@/contexts/LanguageContext"
+import { staticData } from "@/data/static"
 
 export default function Contact() {
   const containerRef = useRef(null)
   const formRef = useRef<HTMLFormElement>(null)
   const isInView = useInView(containerRef, { once: false, amount: 0.2 })
+  const { language } = useLanguage()
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -45,10 +48,10 @@ export default function Contact() {
 
     try {
       await emailjs.sendForm(
-        "service_09wctwh", // EmailJS service ID'nizi buraya yazın
-        "template_gmiw4i7", // EmailJS template ID'nizi buraya yazın
+        "service_09wctwh",
+        "template_gmiw4i7",
         formRef.current!,
-        "9dgkxNiF4pKSZZZQs" // EmailJS public key'inizi buraya yazın
+        "9dgkxNiF4pKSZZZQs"
       )
 
       setSubmitStatus("success")
@@ -77,11 +80,13 @@ export default function Contact() {
           style={{ opacity }}
         >
           <motion.h2 className="text-4xl md:text-5xl font-bold text-[#0808c1] mb-4" style={{ y: y1 }}>
-           Əlaqə
+            {language === 'en' ? 'Contact' : 'Əlaqə'}
           </motion.h2>
           <motion.div className="w-20 h-1 bg-[#fff45c] mx-auto mb-8" />
           <motion.p className="max-w-2xl mx-auto text-lg text-gray-600">
-            Have a project in mind or just want to say hello? I'd love to hear from you!
+            {language === 'en'
+              ? 'Have a project in mind or just want to say hello? I\'d love to hear from you!'
+              : 'Ağlınızda bir layihə var və ya sadəcə salam demək istəyirsiniz? Sizdən eşitməyi çox istəyirəm!'}
           </motion.p>
         </motion.div>
 
@@ -95,7 +100,9 @@ export default function Contact() {
               <div className="absolute top-0 right-0 w-40 h-40 bg-[#0808c1]/5 rounded-full -mr-20 -mt-20" />
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#fff45c]/5 rounded-full -ml-16 -mb-16" />
 
-              <h3 className="text-2xl font-bold text-gray-800 mb-6 relative z-10">Contact Information</h3>
+              <h3 className="text-2xl font-bold text-gray-800 mb-6 relative z-10">
+                {language === 'en' ? 'Contact Information' : 'Əlaqə Məlumatları'}
+              </h3>
 
               <div className="space-y-6 relative z-10">
                 <motion.div className="flex items-start space-x-4" whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
@@ -113,7 +120,9 @@ export default function Contact() {
                     <Phone size={20} />
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium text-gray-800">Phone</h4>
+                    <h4 className="text-lg font-medium text-gray-800">
+                      {language === 'en' ? 'Phone' : 'Telefon'}
+                    </h4>
                     <p className="text-gray-600">+1 (234) 567-8901</p>
                   </div>
                 </motion.div>
@@ -123,14 +132,18 @@ export default function Contact() {
                     <MapPin size={20} />
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium text-gray-800">Location</h4>
+                    <h4 className="text-lg font-medium text-gray-800">
+                      {language === 'en' ? 'Location' : 'Ünvan'}
+                    </h4>
                     <p className="text-gray-600">San Francisco, California</p>
                   </div>
                 </motion.div>
               </div>
 
               <div className="mt-12 relative z-10">
-                <h4 className="text-lg font-medium text-gray-800 mb-4">Connect with me</h4>
+                <h4 className="text-lg font-medium text-gray-800 mb-4">
+                  {language === 'en' ? 'Connect with me' : 'Mənimlə əlaqə'}
+                </h4>
                 <div className="flex space-x-4">
                   <motion.a
                     href="#"
@@ -228,12 +241,14 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Send Me a Message</h3>
+              <h3 className="text-2xl font-bold text-gray-800 mb-6">
+                {language === 'en' ? 'Send Me a Message' : 'Mənə Mesaj Göndərin'}
+              </h3>
 
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Your Name
+                    {language === 'en' ? 'Your Name' : 'Adınız'}
                   </label>
                   <motion.div whileFocus={{ scale: 1.01 }} transition={{ duration: 0.2 }}>
                     <input
@@ -243,7 +258,7 @@ export default function Contact() {
                       value={formState.name}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0808c1]/50 focus:border-transparent"
-                      placeholder="John Doe"
+                      placeholder={language === 'en' ? 'John Doe' : 'Ələmdar Manafov'}
                       required
                     />
                   </motion.div>
@@ -251,7 +266,7 @@ export default function Contact() {
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Your Email
+                    {language === 'en' ? 'Your Email' : 'E-poçt Ünvanınız'}
                   </label>
                   <motion.div whileFocus={{ scale: 1.01 }} transition={{ duration: 0.2 }}>
                     <input
@@ -261,7 +276,7 @@ export default function Contact() {
                       value={formState.email}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0808c1]/50 focus:border-transparent"
-                      placeholder="john@example.com"
+                      placeholder={language === 'en' ? 'john@example.com' : 'alamder@example.com'}
                       required
                     />
                   </motion.div>
@@ -269,7 +284,7 @@ export default function Contact() {
 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                    Subject
+                    {language === 'en' ? 'Subject' : 'Mövzu'}
                   </label>
                   <motion.div whileFocus={{ scale: 1.01 }} transition={{ duration: 0.2 }}>
                     <input
@@ -279,7 +294,7 @@ export default function Contact() {
                       value={formState.subject}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0808c1]/50 focus:border-transparent"
-                      placeholder="What's this about?"
+                      placeholder={language === 'en' ? 'What\'s this about?' : 'Bu nə haqqındadır?'}
                       required
                     />
                   </motion.div>
@@ -287,7 +302,7 @@ export default function Contact() {
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Your Message
+                    {language === 'en' ? 'Your Message' : 'Mesajınız'}
                   </label>
                   <motion.div whileFocus={{ scale: 1.01 }} transition={{ duration: 0.2 }}>
                     <textarea
@@ -297,7 +312,7 @@ export default function Contact() {
                       onChange={handleChange}
                       rows={5}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0808c1]/50 focus:border-transparent"
-                      placeholder="Hello, I'd like to talk about..."
+                      placeholder={language === 'en' ? 'Hello, I\'d like to talk about...' : 'Salam, mən ... haqqında danışmaq istəyirəm'}
                       required
                     />
                   </motion.div>
@@ -305,13 +320,17 @@ export default function Contact() {
 
                 {submitStatus === "success" && (
                   <div className="p-4 bg-green-50 text-green-700 rounded-lg">
-                    Message sent successfully! I'll get back to you soon.
+                    {language === 'en'
+                      ? 'Message sent successfully! I\'ll get back to you soon.'
+                      : 'Mesaj uğurla göndərildi! Tezliklə sizinlə əlaqə saxlayacağam.'}
                   </div>
                 )}
 
                 {submitStatus === "error" && (
                   <div className="p-4 bg-red-50 text-red-700 rounded-lg">
-                    Oops! Something went wrong. Please try again later.
+                    {language === 'en'
+                      ? 'Oops! Something went wrong. Please try again later.'
+                      : 'Üzr istəyirik! Bir şeylər yanlış getdi. Zəhmət olmasa daha sonra yenidən cəhd edin.'}
                   </div>
                 )}
 
@@ -324,7 +343,15 @@ export default function Contact() {
                   whileHover={!isSubmitting ? { scale: 1.02, backgroundColor: "#0606a0" } : {}}
                   whileTap={!isSubmitting ? { scale: 0.98 } : {}}
                 >
-                  <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
+                  <span>
+                    {isSubmitting
+                      ? language === 'en'
+                        ? 'Sending...'
+                        : 'Göndərilir...'
+                      : language === 'en'
+                      ? 'Send Message'
+                      : 'Mesaj Göndər'}
+                  </span>
                   {!isSubmitting && <Send size={18} />}
                 </motion.button>
               </form>

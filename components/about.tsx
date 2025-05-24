@@ -5,10 +5,13 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"
 import { useInView } from "framer-motion"
 import { Heart, Book, GraduationCap, Briefcase, Bike, Users } from "lucide-react"
+import { useLanguage } from "@/contexts/LanguageContext"
+import { aboutData } from "@/data/about-data"
 
 export default function About() {
   const containerRef = useRef(null)
   const isInView = useInView(containerRef, { once: false, amount: 0.2 })
+  const { language } = useLanguage()
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -53,11 +56,11 @@ export default function About() {
             id="about-section"
             aria-label="About Me Section"
           >
-            Haqqımda
+            {aboutData[language].mainInfo.title}
           </motion.h2>
           <motion.div className="w-20 h-1 bg-[#fff45c] mx-auto mb-8" />
           <motion.p className="max-w-2xl mx-auto text-lg font-semibold text-gray-600">
-            Sloqanımız: #BePositive ✌
+            {aboutData[language].mainInfo.slogan}
           </motion.p>
         </motion.div>
 
@@ -76,15 +79,11 @@ export default function About() {
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#0808c1]/5 rounded-full -mr-16 -mt-16" />
             <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#fff45c]/20 rounded-full -ml-12 -mb-12" />
             
-            <h3 className="text-2xl font-bold text-[#0808c1] mb-4">Ələmdar Manafov</h3>
-            <p className="text-gray-600 mb-6">
-              1994-cü ildə Bakı şəhərində anadan olub. Orta təhsilini 195 saylı tam orta məktəbdə alıb. 
-              Ali təhsili - Azərbaycan Texniki Universitetində Proseslərin Avtomatlaşdırılması ixtisasında 
-              2011-2015-ci illərdə Bakalavr və 2016-2018-ci illərdə isə eyni ixtisasın Magistr təhsilin alıb.
-            </p>
+            <h3 className="text-2xl font-bold text-[#0808c1] mb-4">{aboutData[language].mainInfo.name}</h3>
+            <p className="text-gray-600 mb-6">{aboutData[language].mainInfo.description}</p>
             <div className="flex items-center gap-2 text-[#0808c1]">
               <GraduationCap size={20} />
-              <span className="font-medium">ATU Mezunu</span>
+              <span className="font-medium">{aboutData[language].mainInfo.education}</span>
             </div>
           </motion.div>
 
@@ -96,15 +95,11 @@ export default function About() {
             <div className="absolute top-0 left-0 w-32 h-32 bg-[#fff45c]/20 rounded-full -ml-16 -mt-16" />
             <div className="absolute bottom-0 right-0 w-24 h-24 bg-[#0808c1]/5 rounded-full -mr-12 -mb-12" />
             
-            <h3 className="text-2xl font-bold text-[#0808c1] mb-4">Professional Kariyer</h3>
-            <p className="text-gray-600 mb-6">
-              2018-ci ildən başlayaraq Sosial media üzrə araşdırmalar edir və seminarlar həyata keçirir. 
-              2019-cu illərdən etibarən Sosial media ilə bağlı müxtəlif Sosial şəbəkələrdə paylaşımlar edir. 
-              2023-cü ildən "BePositive.az" şirkətinin qurucusu olaraq brendinq və marketinq xidmətləri təqdim edir.
-            </p>
+            <h3 className="text-2xl font-bold text-[#0808c1] mb-4">{aboutData[language].career.title}</h3>
+            <p className="text-gray-600 mb-6">{aboutData[language].career.description}</p>
             <div className="flex items-center gap-2 text-[#0808c1]">
               <Briefcase size={20} />
-              <span className="font-medium">BePositive.az</span>
+              <span className="font-medium">{aboutData[language].career.company}</span>
             </div>
           </motion.div>
 
@@ -116,14 +111,11 @@ export default function About() {
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#0808c1]/5 rounded-full -mr-16 -mt-16" />
             <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#fff45c]/20 rounded-full -ml-12 -mb-12" />
             
-            <h3 className="text-2xl font-bold text-[#0808c1] mb-4">Kitab və Başarılar</h3>
-            <p className="text-gray-600 mb-6">
-              "Niyə görə #BePositive" kitabının müəllifidir. Sosial media strategiyası və brendinq sahəsində 
-              bir çox uğurlu layihələrə imza atıb. Şirkətlərə və fərdi şəxslərə marketinq xidmətləri təqdim edir.
-            </p>
+            <h3 className="text-2xl font-bold text-[#0808c1] mb-4">{aboutData[language].books.title}</h3>
+            <p className="text-gray-600 mb-6">{aboutData[language].books.description}</p>
             <div className="flex items-center gap-2 text-[#0808c1]">
               <Book size={20} />
-              <span className="font-medium">Kitab Müəllifi</span>
+              <span className="font-medium">{aboutData[language].books.role}</span>
             </div>
           </motion.div>
 
@@ -135,23 +127,19 @@ export default function About() {
             <div className="absolute top-0 left-0 w-32 h-32 bg-[#fff45c]/20 rounded-full -ml-16 -mt-16" />
             <div className="absolute bottom-0 right-0 w-24 h-24 bg-[#0808c1]/5 rounded-full -mr-12 -mb-12" />
             
-            <h3 className="text-2xl font-bold text-[#0808c1] mb-4">Hobbilər və Həyat Şüarı</h3>
+            <h3 className="text-2xl font-bold text-[#0808c1] mb-4">{aboutData[language].hobbies.title}</h3>
             <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <Bike size={20} className="text-[#0808c1]" />
-                <span className="text-gray-600">Velosiped sürmək</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Heart size={20} className="text-[#0808c1]" />
-                <span className="text-gray-600">Fitneslə məşğul olmaq</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Users size={20} className="text-[#0808c1]" />
-                <span className="text-gray-600">İnsanlarla ünsiyyət</span>
-              </div>
+              {aboutData[language].hobbies.activities.map((activity, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  {activity.icon === 'bike' && <Bike size={20} className="text-[#0808c1]" />}
+                  {activity.icon === 'heart' && <Heart size={20} className="text-[#0808c1]" />}
+                  {activity.icon === 'users' && <Users size={20} className="text-[#0808c1]" />}
+                  <span className="text-gray-600">{activity.text}</span>
+                </div>
+              ))}
             </div>
             <div className="mt-6 p-4 bg-[#0808c1]/5 rounded-xl">
-              <p className="text-[#0808c1] font-bold text-lg">Həyat şüarı: #BePositive</p>
+              <p className="text-[#0808c1] font-bold text-lg">{aboutData[language].hobbies.motto}</p>
             </div>
           </motion.div>
         </motion.div>

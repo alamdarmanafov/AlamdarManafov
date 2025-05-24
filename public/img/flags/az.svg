@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Üç üfüqi zolaq -->
+  <rect y="0" width="24" height="8" fill="#00B9E4"/> <!-- Mavi -->
+  <rect y="8" width="24" height="8" fill="#ED2939"/> <!-- Qırmızı -->
+  <rect y="16" width="24" height="8" fill="#3F9C35"/> <!-- Yaşıl -->
+
+  <!-- Aypara -->
+  <circle cx="10" cy="12" r="3" fill="white"/>
+  <circle cx="11.2" cy="12" r="2.4" fill="#ED2939"/>
+
+  <!-- Səkkizguşəli ulduz -->
+  <g transform="translate(14.5,12) scale(0.6)">
+    <g transform="rotate(-90)">
+      <polygon points="0,-4 1.18,-1.24 3.82,-1.24 1.52,0.47 2.35,3.24 0,1.6 -2.35,3.24 -1.52,0.47 -3.82,-1.24 -1.18,-1.24" fill="white"/>
+    </g>
+  </g>
+</svg>

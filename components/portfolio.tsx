@@ -7,10 +7,12 @@ import { useInView } from "framer-motion"
 import { portfolioData } from "@/data/portfolio-data"
 import Link from "next/link"
 import { ExternalLink, Tag } from "lucide-react"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 export default function Portfolio() {
   const containerRef = useRef(null)
   const isInView = useInView(containerRef, { once: false, amount: 0.2 })
+  const { language } = useLanguage()
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -55,11 +57,11 @@ export default function Portfolio() {
             id="portfolio-section"
             aria-label="Portfolio Section"
           >
-            Portfolio
+            {language === 'en' ? 'Portfolio' : 'Portfolio'}
           </motion.h2>
           <motion.div className="w-20 h-1 bg-[#fff45c] mx-auto mb-8" />
           <motion.p className="max-w-2xl mx-auto text-lg text-gray-600">
-            Uğurlu layihələrim və işlərim
+            {language === 'en' ? 'My successful projects and works' : 'Uğurlu layihələrim və işlərim'}
           </motion.p>
         </motion.div>
 
@@ -70,7 +72,7 @@ export default function Portfolio() {
           animate={isInView ? "visible" : "hidden"}
           style={{ opacity }}
         >
-          {portfolioData.map((item) => (
+          {portfolioData[language].map((item) => (
             <motion.div
               key={item.id}
               className="group relative bg-white rounded-2xl shadow-xl overflow-hidden"

@@ -3,13 +3,27 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { useTypewriter, Cursor } from "react-simple-typewriter"
 import Person from "@/public/img/AlemdarManafovPerson.jpg"
+import { useLanguage } from "@/contexts/LanguageContext"
+import { staticData } from "@/data/static"
 
 export default function Hero() {
+  const { language } = useLanguage()
   const [text] = useTypewriter({
-    words: ["Sosial Media Eksperti", "Building Digital Dreams", "Code. Design. Inspire."],
+    words: language === 'en' 
+      ? ["Social Media Expert", "Building Digital Dreams", "Code. Design. Inspire."]
+      : ["Sosial Media Eksperti", "Rəqəmsal Arzuları Qururuq", "Kod. Dizayn. İlham."],
     loop: true,
     delaySpeed: 2000,
   })
+
+  const handleConsultationClick = () => {
+    const phoneNumber = "+994501234567" // WhatsApp numaranızı buraya ekleyin
+    const message = language === 'en' 
+      ? "Hello, I would like to join the consultation."
+      : "Salam, konsultasiyaya qoşulmaq istəyirəm."
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, '_blank')
+  }
 
   return (
     <div className="min-h-screen pt-20 flex flex-col justify-center relative overflow-hidden">
@@ -26,9 +40,8 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-           
             <h1 className="text-5xl md:text-7xl font-bold text-[#0808c1]">
-              Ələmdar Manafov
+              {language === 'en' ? 'Alamdar Manafov' : 'Ələmdar Manafov'}
             </h1>
           </motion.div>
 
@@ -48,7 +61,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            Transforming ideas into digital experiences that captivate and inspire.
+            {staticData[language].hero.description}
           </motion.p>
 
           <motion.div
@@ -67,11 +80,12 @@ export default function Hero() {
             </motion.span>
 
             <motion.button
+              onClick={handleConsultationClick}
               className="px-8 py-4 bg-[#0808c1] text-white rounded-full text-lg font-medium shadow-lg hover:shadow-xl transition-all"
               whileHover={{ scale: 1.05, backgroundColor: "#0606a0" }}
               whileTap={{ scale: 0.98 }}
             >
-             Konsultasiyaya qoşul
+              {language === 'en' ? 'Join Consultation' : 'Konsultasiyaya qoşul'}
             </motion.button>
           </motion.div>
         </motion.div>
@@ -96,7 +110,7 @@ export default function Hero() {
           >
             <Image
               src={Person}
-              alt="Alamder Manafov"
+              alt={language === 'en' ? 'Alamdar Manafov' : 'Ələmdar Manafov'}
               fill
               className="object-cover"
               priority

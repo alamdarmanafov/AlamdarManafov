@@ -4,7 +4,12 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import Logo from "@/public/img/Logo_Blue.png"
 import Image from "next/image"
+import { useLanguage } from "@/contexts/LanguageContext"
+import { staticData } from "@/data/static"
+
 export default function Footer() {
+  const { language } = useLanguage()
+
   return (
     <footer className="py-12 bg-white border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -16,20 +21,18 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
           >
             <Link href="/">
-            <Image
-              src={Logo}
-              alt="Logo"
-              width={82}
-              height={82}
-              className="object-contain"
-            />
-          </Link>
+              <Image
+                src={Logo}
+                alt="Logo"
+                width={82}
+                height={82}
+                className="object-contain"
+              />
+            </Link>
             <p className="text-gray-500 mt-2">
-              &copy; {new Date().getFullYear()} Alamder Manafov. All rights reserved.
+              &copy; {new Date().getFullYear()} Alamder Manafov. {staticData[language].footer.rights}
             </p>
           </motion.div>
-
-         
 
           <motion.div
             className="flex space-x-4 mt-6 md:mt-0"
@@ -131,7 +134,7 @@ export default function Footer() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <p>Designed and developed with ❤️ <a href="https://ilkin.software" target="_blank">1lkin13</a></p>
+          <p>{staticData[language].footer.social} <a href="https://ilkin.software" target="_blank">1lkin13</a></p>
           <p className="mt-2">
             <span className="text-[#0808c1] font-bold"> #BePositive✌🏻</span>
           </p>

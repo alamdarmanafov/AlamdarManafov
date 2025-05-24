@@ -9,6 +9,7 @@ import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import ParticleBackground from "@/components/particle-background"
 import Portfolio from "@/components/portfolio"
+import { LanguageProvider } from "@/contexts/LanguageContext"
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0)
@@ -32,36 +33,37 @@ export default function Home() {
     { id: "about", label: "Haqqımda", ref: aboutRef },
     { id: "podcast", label: "Podkastlar", ref: podcastRef },
     { id: "portfolio", label: "Portfolio", ref: portfolioRef },
-
     { id: "contact", label: "Əlaqə", ref: contactRef },
   ]
 
   return (
-    <main className="relative min-h-screen bg-white overflow-hidden">
-      <ParticleBackground />
-      <Navbar sections={sections} scrollY={scrollY} />
+    <LanguageProvider>
+      <main className="relative min-h-screen bg-white overflow-hidden">
+        <ParticleBackground />
+        <Navbar sections={sections} scrollY={scrollY} />
 
-      <section id="home" className="relative">
-        <Hero />
-      </section>
+        <section id="home" className="relative">
+          <Hero />
+        </section>
 
-      <section id="about" ref={aboutRef} className="relative">
-        <About />
-      </section>
+        <section id="about" ref={aboutRef} className="relative">
+          <About />
+        </section>
 
-      <section id="podcast" ref={podcastRef} className="relative">
-        <Podcast />
-      </section>
+        <section id="podcast" ref={podcastRef} className="relative">
+          <Podcast />
+        </section>
 
-      <section id="portfolio" ref={portfolioRef} className="relative">
-        <Portfolio />
-      </section>
+        <section id="portfolio" ref={portfolioRef} className="relative">
+          <Portfolio />
+        </section>
 
-      <section id="contact" ref={contactRef} className="relative">
-        <Contact />
-      </section>
+        <section id="contact" ref={contactRef} className="relative">
+          <Contact />
+        </section>
 
-      <Footer />
-    </main>
+        <Footer />
+      </main>
+    </LanguageProvider>
   )
 }
