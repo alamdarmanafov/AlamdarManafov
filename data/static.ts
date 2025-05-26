@@ -14,7 +14,7 @@ export const staticData = {
     },
     footer: {
       rights: "All rights reserved",
-      social: "Follow me on social media"
+      social: "Designed and developed by ❤️"
     }
   },
   az: {
@@ -32,7 +32,7 @@ export const staticData = {
     },
     footer: {
       rights: "Bütün hüquqlar qorunur",
-      social: "Sosial mediada izləyin"
+      social: "Dizayn edilidi və hazırlanıldı by ❤️"
     }
   }
 }; 

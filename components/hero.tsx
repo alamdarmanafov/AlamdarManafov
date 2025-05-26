@@ -10,14 +10,14 @@ export default function Hero() {
   const { language } = useLanguage()
   const [text] = useTypewriter({
     words: language === 'en' 
-      ? ["Social Media Expert", "Building Digital Dreams", "Code. Design. Inspire."]
-      : ["Sosial Media Eksperti", "Rəqəmsal Arzuları Qururuq", "Kod. Dizayn. İlham."],
+      ? ["Marketing Expert "," Branding & Digital Marketing Expert" ," Social Media Advisor"]
+      : ["Marketinq Eksperti", "Brend və Rəqəmsal Marketinq Ekspert", "Sosial Media Məsləhətçisi"],
     loop: true,
     delaySpeed: 2000,
   })
 
   const handleConsultationClick = () => {
-    const phoneNumber = "+994501234567" // WhatsApp numaranızı buraya ekleyin
+    const phoneNumber = "+994105310129" // WhatsApp numaranızı buraya ekleyin
     const message = language === 'en' 
       ? "Hello, I would like to join the consultation."
       : "Salam, konsultasiyaya qoşulmaq istəyirəm."

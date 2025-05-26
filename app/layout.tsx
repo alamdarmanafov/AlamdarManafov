@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Alamder Manafov | Creative Developer",
   description:
     "Portfolio of Alamder Manafov - Creative developer building digital experiences that captivate and inspire.",
-  keywords: ["Alamder Manafov", "Creative Developer", "Web Development", "Portfolio", "Digital Experiences"],
+  keywords: ["Alamdar Manafov", "Creative Developer", "Web Development", "Portfolio", "Digital Experiences"],
   openGraph: {
     title: "Alamder Manafov | Creative Developer",
     description:

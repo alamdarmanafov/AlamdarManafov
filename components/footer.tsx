@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Link from "next/link"
-import Logo from "@/public/img/Logo_Blue.png"
-import Image from "next/image"
-import { useLanguage } from "@/contexts/LanguageContext"
-import { staticData } from "@/data/static"
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Logo from "@/public/img/Logo_Blue.png";
+import Image from "next/image";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { staticData } from "@/data/static";
 
 export default function Footer() {
-  const { language } = useLanguage()
+  const { language } = useLanguage();
 
   return (
     <footer className="py-12 bg-white border-t border-gray-100">
@@ -30,7 +30,8 @@ export default function Footer() {
               />
             </Link>
             <p className="text-gray-500 mt-2">
-              &copy; {new Date().getFullYear()} Alamder Manafov. {staticData[language].footer.rights}
+              &copy; {new Date().getFullYear()} Alamdar Manafov.{" "}
+              {staticData[language].footer.rights}
             </p>
           </motion.div>
 
@@ -41,9 +42,13 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <motion.a
-              href="#"
+              href="https://www.linkedin.com/in/alamdarmanafov/"
               className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600"
-              whileHover={{ scale: 1.1, backgroundColor: "#0808c1", color: "#ffffff" }}
+              whileHover={{
+                scale: 1.1,
+                backgroundColor: "#0808c1",
+                color: "#ffffff",
+              }}
               whileTap={{ scale: 0.95 }}
             >
               <svg
@@ -63,9 +68,13 @@ export default function Footer() {
               </svg>
             </motion.a>
             <motion.a
-              href="#"
+              href="https://www.facebook.com/alamdarmanafov/"
               className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600"
-              whileHover={{ scale: 1.1, backgroundColor: "#0808c1", color: "#ffffff" }}
+              whileHover={{
+                scale: 1.1,
+                backgroundColor: "#0808c1",
+                color: "#ffffff",
+              }}
               whileTap={{ scale: 0.95 }}
             >
               <svg
@@ -73,19 +82,19 @@ export default function Footer() {
                 width="18"
                 height="18"
                 viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+                fill="currentColor"
               >
-                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24h11.495V14.708h-3.13v-3.622h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.794.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.31h3.588l-.467 3.622h-3.121V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z" />
               </svg>
             </motion.a>
             <motion.a
-              href="#"
+              href="https://www.instagram.com/alamdarmanafov/"
               className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600"
-              whileHover={{ scale: 1.1, backgroundColor: "#0808c1", color: "#ffffff" }}
+              whileHover={{
+                scale: 1.1,
+                backgroundColor: "#0808c1",
+                color: "#ffffff",
+              }}
               whileTap={{ scale: 0.95 }}
             >
               <svg
@@ -105,9 +114,13 @@ export default function Footer() {
               </svg>
             </motion.a>
             <motion.a
-              href="#"
+              href="https://www.youtube.com/@alamdarmanafov"
               className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600"
-              whileHover={{ scale: 1.1, backgroundColor: "#0808c1", color: "#ffffff" }}
+              whileHover={{
+                scale: 1.1,
+                backgroundColor: "#0808c1",
+                color: "#ffffff",
+              }}
               whileTap={{ scale: 0.95 }}
             >
               <svg
@@ -134,12 +147,17 @@ export default function Footer() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <p>{staticData[language].footer.social} <a href="https://ilkin.software" target="_blank">1lkin13</a></p>
+          <p>
+            {staticData[language].footer.social}{" "}
+            <a href="https://ilkin.software" target="_blank">
+              1lkin13
+            </a>
+          </p>
           <p className="mt-2">
             <span className="text-[#0808c1] font-bold"> #BePositive✌🏻</span>
           </p>
         </motion.div>
       </div>
     </footer>
-  )
+  );
 }
