@@ -6,10 +6,8 @@ import Logo from "@/public/img/Logo_Blue.png";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { staticData } from "@/data/static";
-
 export default function Footer() {
   const { language } = useLanguage();
-
   return (
     <footer className="py-12 bg-white border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
