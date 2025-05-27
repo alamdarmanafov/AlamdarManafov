@@ -9,7 +9,7 @@ export const aboutData = {
     },
     career: {
       title: "Professional Career",
-      description: "Starting from 2018, conducts research and seminars on social media. Since 2019, shares content about social media on various social networks. Since 2023, provides branding and marketing services as the founder of \"BePositive.az\".",
+      description: "I am a Social Media Strategy expert with 8+ years of experience, the founder of the “BePositive.az” brand and the author of a personalized content approach model. During my career, I have collaborated with singers, actors, entrepreneurs, and dozens of social media and brand development companies.Since 2024, I have been providing reel shooting, editing, social media content planning, and brand visual development for the individual and business company Be Positive, which I founded.",
       company: "BePositive.az"
     },
     books: {
@@ -37,7 +37,7 @@ export const aboutData = {
     },
     career: {
       title: "Professional Karyera",
-      description: "2018-ci ildən başlayaraq Sosial media üzrə araşdırmalar edir və seminarlar həyata keçirir. 2019-cu illərdən etibarən Sosial media ilə bağlı müxtəlif Sosial şəbəkələrdə paylaşımlar edir. 2023-cü ildən \"BePositive.az\" şirkətinin qurucusu olaraq brendinq və marketinq xidmətləri təqdim edir.",
+      description: "8+ illik təcrübəyə malik sosial media strategiya eksperti, “BePositive.az” brendinin təsisçisi və kontent üzrə fərdiləşdirilmiş yanaşma modelinin müəllifiyəm. Karyeram ərzində müğənnilər, aktyorlar, sahibkarlar və şirkətlərlə sosial media və brend inkişafı üzrə əməkdaşlıq etmişəm. 2024-cü ildən etibarən qurduğum Be Positive şirkəti vasitəsilə fərdi və biznes müştərilər üçün reels çəkilişi, montaj, sosial media kontent planlaması və brendin vizual inkişafı xidmətlərini təqdim edirəm.",
       company: "BePositive.az"
     },
     books: {

@@ -9,8 +9,8 @@ export const staticData = {
     },
     hero: {
       title: "Welcome to My Portfolio",
-      subtitle: "Full Stack Developer & Content Creator",
-      description: "I create innovative solutions and share my knowledge through podcasts"
+      subtitle: "Digital marketing Expert & Content Creator",
+      description: "I believe that positive thinking, the right strategy, and strong content can change everything. ‘Be Positive’ is not just a brand – it’s a lifestyle."
     },
     footer: {
       rights: "All rights reserved",
@@ -27,8 +27,8 @@ export const staticData = {
     },
     hero: {
       title: "Portfolio Səhifəmə Xoş Gəlmisiniz",
-      subtitle: "Full Stack Developer & Məzmun Yaradıcısı",
-      description: "İnnovativ həllər yaradır və biliklərimi podcast vasitəsilə paylaşıram"
+      subtitle: "Rəqəmsal Marketinq Ekspert & Məzmun Yaradıcısı",
+      description: "Mən inanıram ki, müsbət düşüncə, doğru strategiya və güclü kontent hər şeyi dəyişə bilər. ‘Be Positive’ sadəcə brend deyil – bir həyat tərzidir."
     },
     footer: {
       rights: "Bütün hüquqlar qorunur",

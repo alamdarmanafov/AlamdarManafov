@@ -53,7 +53,7 @@ export const podcastData = {
       title: "Spotify podcast",
       description: "Spotify podcast.",
       image: "img/2.svg?height=200&width=350",
-      type: "Video",
+      type: "Podcast",
       date: "22 Aprel 2024",
       url: "https://open.spotify.com/show/4c675tz3FGAWn6P84OVWSZ?si=a281e82cfc5942c5",
     },
