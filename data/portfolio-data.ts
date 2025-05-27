@@ -25,16 +25,16 @@ export const portfolioData = {
       description: "Book project and marketing strategy",
       image: "/img/portfolio/book.jpg",
       category: "Publishing",
-      link: "https://bepositive.az/book",
+      link: "https://novella.az/kitab/niye-bepositive",
       technologies: ["Book", "Marketing", "Strategy"]
     },
     {
       id: "3",
-      title: "Social Media Training",
-      description: "Social media training and seminars",
+      title: "Social Media Trainings",
+      description: "Social media trainings and seminars",
       image: "/img/portfolio/training.jpg",
       category: "Education",
-      link: "https://bepositive.az/training",
+      link: "https://wa.me/994105310129",
       technologies: ["Training", "Social Media", "Education"]
     }
   ],
@@ -42,9 +42,9 @@ export const portfolioData = {
     {
       id: "1",
       title: "BePositive.az",
-      description: "Sosial media marketinq və brendinq şirkəti",
+      description: "Reklam Agentliyi",
       image: "/img/portfolio/bepositive.jpg",
-      category: "Brendinq",
+      category: "Agentlik",
       link: "https://bepositive.az",
       technologies: ["Sosial Media", "Brendinq", "Marketinq"]
     },
@@ -54,16 +54,16 @@ export const portfolioData = {
       description: "Kitab layihəsi və marketinq strategiyası",
       image: "/img/portfolio/book.jpg",
       category: "Nəşriyyat",
-      link: "https://bepositive.az/book",
+      link: "https://novella.az/kitab/niye-bepositive",
       technologies: ["Kitab", "Marketinq", "Strategiya"]
     },
     {
       id: "3",
-      title: "Sosial Media Training",
-      description: "Sosial media üzrə təlim və seminarlar",
+      title: "Sosial Media Təlimləri",
+      description: "Sosial media üzrə təlimlər və seminarlar",
       image: "/img/portfolio/training.jpg",
       category: "Təhsil",
-      link: "https://bepositive.az/training",
+      link: "https://wa.me/994105310129",
       technologies: ["Təlim", "Sosial Media", "Təhsil"]
     }
   ]
