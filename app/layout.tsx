@@ -7,22 +7,22 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Alamder Manafov | Creative Developer",
+  title: "Alamdar Manafov | Digital Marketing Expert",
   description:
-    "Portfolio of Alamder Manafov - Creative developer building digital experiences that captivate and inspire.",
-  keywords: ["Alamdar Manafov", "Creative Developer", "Web Development", "Portfolio", "Digital Experiences"],
+    "Portfolio of Alamdar Manafov - Creative developer building digital experiences that captivate and inspire.",
+  keywords: ["Alamdar Manafov", "Digital Marketing Expert", "Social media advisor", "Portfolio", "Digital Experiences, sosial media məsləhətçisi, smm, blogger, researcher"],
   openGraph: {
-    title: "Alamder Manafov | Creative Developer",
+    title: "Alamdar Manafov | Creative Developer",
     description:
-      "Portfolio of Alamder Manafov - Creative developer building digital experiences that captivate and inspire.",
-    url: "https://alamdermanafov.com",
-    siteName: "Alamder Manafov Portfolio",
+      "Portfolio of Alamdar Manafov - Creative developer building digital experiences that captivate and inspire.",
+    url: "https://alamdarmanafov.com",
+    siteName: "Alamdar Manafov Portfolio",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Alamder Manafov Portfolio",
+        alt: "Alamdar Manafov Portfolio",
       },
     ],
     locale: "en_US",
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alamder Manafov | Creative Developer",
+    title: "Alamdar Manafov | Creative Developer",
     description:
-      "Portfolio of Alamder Manafov - Creative developer building digital experiences that captivate and inspire.",
+      "Portfolio of Alamdar Manafov - Creative developer building digital experiences that captivate and inspire.",
     images: ["/og-image.jpg"],
   },
   icons: {
