@@ -7,6 +7,7 @@ import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { staticData } from "@/data/static";
 export default function Footer() {
+  // Get the current language from context
   const { language } = useLanguage();
   return (
     <footer className="py-12 bg-white border-t border-gray-100">

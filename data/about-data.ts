@@ -5,7 +5,7 @@ export const aboutData = {
       slogan: "Our Slogan: #BePositive ✌",
       name: "Ələmdar Manafov",
       description: "Born in 1994 in Baku. Completed secondary education at School No. 195. Received higher education at Azerbaijan Technical University in Process Automation, completing Bachelor's degree from 2011-2015 and Master's degree in the same field from 2016-2018.",
-      education: "ATU Graduate"
+      education: "AZTU Graduate"
     },
     career: {
       title: "Professional Career",
@@ -33,15 +33,15 @@ export const aboutData = {
       slogan: "Sloqanımız: #BePositive ✌",
       name: "Ələmdar Manafov",
       description: "1994-cü ildə Bakı şəhərində anadan olub. Orta təhsilini 195 saylı tam orta məktəbdə alıb. Ali təhsili - Azərbaycan Texniki Universitetində Proseslərin Avtomatlaşdırılması ixtisasında 2011-2015-ci illərdə Bakalavr və 2016-2018-ci illərdə isə eyni ixtisasın Magistr təhsilin alıb.",
-      education: "ATU Mezunu"
+      education: "AZTU Məzunu"
     },
     career: {
-      title: "Professional Kariyer",
+      title: "Professional Kariyera",
       description: "2018-ci ildən başlayaraq Sosial media üzrə araşdırmalar edir və seminarlar həyata keçirir. 2019-cu illərdən etibarən Sosial media ilə bağlı müxtəlif Sosial şəbəkələrdə paylaşımlar edir. 2023-cü ildən \"BePositive.az\" şirkətinin qurucusu olaraq brendinq və marketinq xidmətləri təqdim edir.",
       company: "BePositive.az"
     },
     books: {
-      title: "Kitab və Başarılar",
+      title: "Kitab və Uğurlar",
       description: "\"Niyə görə #BePositive\" kitabının müəllifidir. Sosial media strategiyası və brendinq sahəsində bir çox uğurlu layihələrə imza atıb. Şirkətlərə və fərdi şəxslərə marketinq xidmətləri təqdim edir.",
       role: "Kitab Müəllifi"
     },
