@@ -36,7 +36,7 @@ export const aboutData = {
       education: "AZTU Məzunu"
     },
     career: {
-      title: "Professional Kariyera",
+      title: "Professional Karyera",
       description: "2018-ci ildən başlayaraq Sosial media üzrə araşdırmalar edir və seminarlar həyata keçirir. 2019-cu illərdən etibarən Sosial media ilə bağlı müxtəlif Sosial şəbəkələrdə paylaşımlar edir. 2023-cü ildən \"BePositive.az\" şirkətinin qurucusu olaraq brendinq və marketinq xidmətləri təqdim edir.",
       company: "BePositive.az"
     },
