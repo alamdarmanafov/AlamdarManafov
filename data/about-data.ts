@@ -3,7 +3,7 @@ export const aboutData = {
     mainInfo: {
       title: "About Me",
       slogan: "Our Slogan: #BePositive ✌",
-      name: "Ələmdar Manafov",
+      name: "Alamdar Manafov",
       description: "Born in 1994 in Baku. Completed secondary education at School No. 195. Received higher education at Azerbaijan Technical University in Process Automation, completing Bachelor's degree from 2011-2015 and Master's degree in the same field from 2016-2018.",
       education: "AZTU Graduate"
     },
