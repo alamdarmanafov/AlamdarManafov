@@ -10,8 +10,8 @@ export default function Hero() {
   const { language } = useLanguage()
   const [text] = useTypewriter({
     words: language === 'en' 
-      ? ["Marketing Expert "," Branding & Digital Marketing Expert" ," Social Media Advisor"]
-      : ["Marketinq Eksperti", "Brend və Rəqəmsal Marketinq Ekspert", "Sosial Media Məsləhətçisi"],
+      ? ["Marketing Strategist "," Branding & Digital Marketing Expert" ," Social Media Advisor"]
+      : ["Marketinq Eksperti", "Brendinq və Rəqəmsal Marketinq Mütəxəssisi", "Sosial Media Məsləhətçisi"],
     loop: true,
     delaySpeed: 2000,
   })
