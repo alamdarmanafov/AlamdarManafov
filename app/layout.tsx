@@ -7,22 +7,22 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Alamdar Manafov | Digital Marketing Expert",
+  title: "Ələmdar Manafov | Rəqəmsal Marketinq Eksperti",
   description:
     "Portfolio of Alamdar Manafov - 8+ years Marketing Strategist | Branding & Digital Expert | Founder of Be Positive Company.",
   keywords: ["Alamdar Manafov", "Ələmdar Manafov" , "Digital Marketing Expert", "Marketing Strategist" , "Branding & Digital Expert" , "Social media advisor", "Portfolio", "Digital Experiences","sosial media məsləhətçisi", "smm", "Blogger", "researcher"],
   openGraph: {
-    title: "Alamdar Manafov | Digital Marketing Expert",
+    title: "Ələmdar Manafov | Rəqəmsal Marketinq Eksperti",
     description:
       "Portfolio of Alamdar Manafov - 8+ years Marketing Strategist | Branding & Digital Expert | Founder of Be Positive Company.",
     url: "https://alamdarmanafov.com",
-    siteName: "Alamdar Manafov's Portfolio",
+    siteName: "Ələmdar Manafov Portfolio",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Alamdar Manafov's Portfolio",
+        alt: "Ələmdar Manafov Portfolio",
       },
     ],
     locale: "en_US",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alamdar Manafov | Digital Marketing Expert",
+    title: "Ələmdar Manafov | Rəqəmsal Marketinq Eksperti",
     description:
       "Portfolio of Alamdar Manafov - 8+ years Marketing Strategist | Branding & Digital Expert | Founder of Be Positive Company.",
     images: ["/og-image.jpg"],
