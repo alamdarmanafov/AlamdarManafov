@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Logo from "@/public/img/Logo_Blue.png";
 import Image from "next/image";
-import Script from "next/script"; // 👈 MilliNet üçün əlavə
+import Script from "next/script";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { staticData } from "@/data/static";
 
@@ -15,6 +15,7 @@ export default function Footer() {
     <footer className="py-12 bg-white border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-center">
+          {/* --- Loqo və mətn --- */}
           <motion.div
             className="mb-6 md:mb-0"
             initial={{ opacity: 0 }}
@@ -36,13 +37,13 @@ export default function Footer() {
             </p>
           </motion.div>
 
+          {/* --- Sosial şəbəkə ikonları --- */}
           <motion.div
             className="flex space-x-4 mt-6 md:mt-0"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            {/* --- Sosial ikonlar hissəsi dəyişməz --- */}
             {/* LinkedIn */}
             <motion.a
               href="https://www.linkedin.com/in/alamdarmanafov/"
@@ -70,6 +71,7 @@ export default function Footer() {
                 <circle cx="4" cy="4" r="2"></circle>
               </svg>
             </motion.a>
+
             {/* Facebook */}
             <motion.a
               href="https://www.facebook.com/alamdarmanafov/"
@@ -91,6 +93,7 @@ export default function Footer() {
                 <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24h11.495V14.708h-3.13v-3.622h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.794.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.31h3.588l-.467 3.622h-3.121V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z" />
               </svg>
             </motion.a>
+
             {/* Instagram */}
             <motion.a
               href="https://www.instagram.com/alamdarmanafov/"
@@ -118,6 +121,7 @@ export default function Footer() {
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
               </svg>
             </motion.a>
+
             {/* YouTube */}
             <motion.a
               href="https://www.youtube.com/@alamdarmanafov"
@@ -147,6 +151,7 @@ export default function Footer() {
           </motion.div>
         </div>
 
+        {/* --- Alt mətn --- */}
         <motion.div
           className="mt-8 pt-8 border-t border-gray-100 text-center text-gray-500 text-sm"
           initial={{ opacity: 0 }}
@@ -155,7 +160,7 @@ export default function Footer() {
         >
           <p>
             {staticData[language].footer.social}{" "}
-            <a href="https://ilkin.software" target="_blank">
+            <a href="https://ilkin.software" target="_blank" rel="noopener noreferrer">
               1lkin13
             </a>
           </p>
