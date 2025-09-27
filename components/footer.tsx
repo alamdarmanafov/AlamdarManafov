@@ -154,6 +154,26 @@ export default function Footer() {
           </p>
           <p className="mt-2">
             <span className="text-[#0808c1] font-bold"> #BePositive✌🏻</span>
+          import { useEffect } from "react";
+
+export default function Footer() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://millinet.az/banner.js?id=338";
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  return (
+    <footer className="footer">
+      {/* Burada digər footer məzmununuz ola bilər */}
+      <p>© {new Date().getFullYear()} Alamdar Manafov</p>
+    </footer>
+  );
+}
           </p>
         </motion.div>
       </div>
