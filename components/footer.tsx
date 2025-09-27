@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Logo from "@/public/img/Logo_Blue.png";
 import Image from "next/image";
-import Script from "next/script";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { staticData } from "@/data/static";
 
@@ -169,12 +168,6 @@ export default function Footer() {
           </p>
         </motion.div>
       </div>
-
-      {/* MilliNet banner script */}
-      <Script
-        src="https://millinet.az/banner.js?id=338"
-        strategy="afterInteractive"
-      />
     </footer>
   );
 }
