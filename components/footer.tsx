@@ -155,7 +155,6 @@ export default function Footer() {
           <p className="mt-2">
             <span className="text-[#0808c1] font-bold"> #BePositive✌🏻</span>
           </p>
-          <img alt="Logo" loading="lazy" width="82" height="82" decoding="async" data-nimg="1" class="object-contain" style="color:transparent" src="/_next/static/media/Millinet-istirak.png">
         </motion.div>
       </div>
     </footer>
