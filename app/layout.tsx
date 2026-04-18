@@ -7,17 +7,17 @@ import { ThemeProvider } from "@/components/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ələmdar Manafov | Rəqəmsal Marketinq Eksperti",
+  title: "Ələmdar Manafov | Marketinq & Brendinq Mütəxəssisi",
   description:
-    "Portfolio of Alamdar Manafov - 8+ years Marketing Strategist | Branding & Digital Expert | Founder of Be Positive Company.",
+    "Portfolio of Alamdar Manafov - 9+ years Marketing & Branding Specialist | Founder of Be Positive Advertising Agency.",
   keywords: [
     "Alamdar Manafov",
     "Ələmdar Manafov",
-    "Digital Marketing Expert",
+    "Marketinq Mütəxəssisi",
     "Marketing Strategist",
     "Branding & Digital Expert",
     "Social media advisor",
-    "Portfolio",
+    "Marketinq və brendinq mütəxəssisi",
     "Digital Experiences",
     "sosial media məsləhətçisi",
     "smm",
@@ -48,8 +48,6 @@ export const metadata: Metadata = {
     "sosial media reklamı",
     "kInstagram reels çəkilişi",
     "sosial media strategiyası",
-    "loqo dizayn",
-    "logo dizayn",
     "instagram reklam",
     "tiktok reklam",
     "facebook reklam",
@@ -92,9 +90,9 @@ export const metadata: Metadata = {
   ],
 
   openGraph: {
-    title: "Ələmdar Manafov | Rəqəmsal Marketinq Eksperti",
+    title: "Ələmdar Manafov | Marketinq & Brendinq Mütəxəssisi",
     description:
-      "Portfolio of Alamdar Manafov - 8+ years Marketing Strategist | Branding & Digital Expert | Founder of Be Positive Company.",
+      "Portfolio of Alamdar Manafov - 9+ years Marketing & Branding Specialist | Founder of Be Positive Advertising Agency.",
     url: "https://alamdarmanafov.com",
     siteName: "Ələmdar Manafov Portfolio",
     images: [
@@ -110,9 +108,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ələmdar Manafov | Rəqəmsal Marketinq Eksperti",
+    title: "Ələmdar Manafov | Marketinq & Brendinq Mütəxəssisi",
     description:
-      "Portfolio of Alamdar Manafov - 8+ years Marketing Strategist | Branding & Digital Expert | Founder of Be Positive Company.",
+      "Portfolio of Alamdar Manafov - 9+ years Marketing & Branding Specialist | Founder of Be Positive Advertising Agency.",
     images: ["/og-image.jpg"],
   },
   icons: {
