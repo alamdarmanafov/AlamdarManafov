@@ -21,21 +21,21 @@ export const portfolioData = {
     },
     {
       id: "2",
-      title: "Why #BePositive",
-      description: "Book project and marketing strategy",
+      title: "Be Positive Life Planner",
+      description: "Plan your day.Stay focused.Feel positive.",
       image: "/img/portfolio/2.svg",
       category: "Publishing",
-      link: "https://novella.az/kitab/niye-bepositive",
+      link: "https://bepositive.cc",
       technologies: ["Book", "Marketing", "Strategy"]
     },
     {
       id: "3",
-      title: "Social Media Trainings",
-      description: "Social media trainings and seminars",
+      title: "Consultation",
+      description: "Business and Marketing consultation services",
       image: "/img/portfolio/3.svg",
-      category: "Education",
+      category: "services",
       link: "https://wa.me/994105310129",
-      technologies: ["Training", "Social Media", "Education"]
+      technologies: ["Consultation", "Social Media", "Business"]
     }
   ],
   az: [
@@ -50,21 +50,21 @@ export const portfolioData = {
     },
     {
       id: "2",
-      title: "Niyə görə #BePositive",
-      description: "Kitab layihəsi və marketinq strategiyası",
+      title: "Be Positive Life Planner",
+      description: "Plan your day.Stay focused.Feel positive.",
       image: "/img/portfolio/2.svg",
-      category: "Nəşriyyat",
-      link: "https://novella.az/kitab/niye-bepositive",
+      category: "saas",
+      link: "https://bepositive.cc",
       technologies: ["Kitab", "Marketinq", "Strategiya"]
     },
     {
       id: "3",
-      title: "Sosial Media Təlimləri",
-      description: "Sosial media üzrə təlimlər və seminarlar",
+      title: "Konsultasiya",
+      description: "Biznes və Marketinq üzrə konsultasiya xidmətləri",
       image: "/img/portfolio/3.svg",
       category: "Təhsil",
       link: "https://wa.me/994105310129",
-      technologies: ["Təlim", "Sosial Media", "Təhsil"]
+      technologies: ["Konsultasiya", "Sosial Media", "biznes"]
     }
   ]
 } 

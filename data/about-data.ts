@@ -9,7 +9,7 @@ export const aboutData = {
     },
     career: {
       title: "Professional Career",
-      description: "I am a Marketing & Brand Specialist with 9+ years of experience, the founder of the “BePositive.az” brand and the author of a personalized content approach model. During my career, I have collaborated with singers, actors, entrepreneurs, and dozens of social media and brand development companies.Since 2024, I have been providing reel shooting, editing, social media content planning, and brand visual development for the individual and business company Be Positive, which I founded.",
+      description: "I am a Business Developer & Marketing Consultant with 10+ years of experience, the founder of the “BePositive.az” brand and the author of a personalized content approach model. During my career, I have collaborated with singers, actors, entrepreneurs, and dozens of social media and brand development companies.Since 2024, I have been providing reel shooting, editing, social media content planning, and brand visual development for the individual and business company Be Positive, which I founded.",
       company: "BePositive.az"
     },
     books: {
@@ -20,7 +20,7 @@ export const aboutData = {
     hobbies: {
       title: "Hobbies",
       activities: [
-        { icon: "bike", text: "Cycling" },
+        { icon: "running", text: "Running" },
         { icon: "heart", text: "Fitness" },
         { icon: "users", text: "Socializing" }
       ],
@@ -37,7 +37,7 @@ export const aboutData = {
     },
     career: {
       title: "Professional Karyera",
-      description: "9+ illik təcrübəyə malik Marketing & Brendinq eksperti, “BePositive.az” brendinin təsisçisi və kontent üzrə fərdiləşdirilmiş yanaşma modelinin müəllifiyəm. Karyeram ərzində müğənnilər, aktyorlar, sahibkarlar və şirkətlərlə sosial media və brend inkişafı üzrə əməkdaşlıq etmişəm. 2024-cü ildən etibarən qurduğum Be Positive şirkəti vasitəsilə fərdi və biznes müştərilər üçün reels çəkilişi, montaj, sosial media kontent planlaması və brendin vizual inkişafı xidmətlərini təqdim edirәm.",
+      description: "10+ illik təcrübəyə malik Business Developer & Marketing Consultant, “BePositive.az” brendinin təsisçisi və kontent üzrə fərdiləşdirilmiş yanaşma modelinin müəllifiyəm. Karyeram ərzində müğənnilər, aktyorlar, sahibkarlar və şirkətlərlə sosial media və brend inkişafı üzrə əməkdaşlıq etmişəm. 2024-cü ildən etibarən qurduğum Be Positive şirkəti vasitəsilə fərdi və biznes müştərilər üçün reels çəkilişi, montaj, sosial media kontent planlaması və brendin vizual inkişafı xidmətlərini təqdim edirәm.",
       company: "BePositive.az"
     },
     books: {
@@ -48,7 +48,7 @@ export const aboutData = {
     hobbies: {
       title: "Hobbilər",
       activities: [
-        { icon: "bike", text: "Velosiped sürmək" },
+        { icon: "running", text: "Qaçış" },
         { icon: "heart", text: "Fitneslə məşğul olmaq" },
         { icon: "users", text: "İnsanlarla ünsiyyət" }
       ],

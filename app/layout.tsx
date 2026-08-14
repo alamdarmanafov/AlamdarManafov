@@ -7,12 +7,15 @@ import { ThemeProvider } from "@/components/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ələmdar Manafov | Marketinq & Brendinq Mütəxəssisi",
+  title: "Ələmdar Manafov | Business Developer & Marketinq Konsultant",
   description:
-    "Portfolio of Alamdar Manafov - 9+ years Marketing & Branding Specialist | Founder of Be Positive Advertising Agency.",
+    "Portfolio of Alamdar Manafov - 10+ years Business Developer & Marketing Consultant | Founder of Be Positive Life Planner.",
   keywords: [
     "Alamdar Manafov",
     "Ələmdar Manafov",
+    "Business Developer",
+    "Marketing Consultant",
+    "Marketinq konsultant",
     "Marketinq Mütəxəssisi",
     "Marketing Strategist",
     "Branding & Digital Expert",
@@ -28,6 +31,7 @@ export const metadata: Metadata = {
     "marketinq expert",
     "marketinq konsultant",
     "be positive advertising agency",
+    "be positive life planner",
     "bepositive.az",
     "rəqəmsal marketinq agentliyi",
     "sosial media idarəetməsi",
@@ -90,17 +94,17 @@ export const metadata: Metadata = {
   ],
 
   openGraph: {
-    title: "Ələmdar Manafov | Marketinq & Brendinq Mütəxəssisi",
+    title: "Alamdar Manafov | Business Developer & Marketing Consultant",
     description:
-      "Portfolio of Alamdar Manafov - 9+ years Marketing & Branding Specialist | Founder of Be Positive Advertising Agency.",
+      "Portfolio of Alamdar Manafov - 10+ years Business Developer & Marketing Consultant | Founder of Be Positive Life Planner.",
     url: "https://alamdarmanafov.com",
-    siteName: "Ələmdar Manafov Portfolio",
+    siteName: "Alamdar Manafov Portfolio",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Ələmdar Manafov Portfolio",
+        alt: "Alamdar Manafov Portfolio",
       },
     ],
     locale: "en_US",
@@ -108,9 +112,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ələmdar Manafov | Marketinq & Brendinq Mütəxəssisi",
+    title: "Alamdar Manafov | Business Developer & Marketing Consultant",
     description:
-      "Portfolio of Alamdar Manafov - 9+ years Marketing & Branding Specialist | Founder of Be Positive Advertising Agency.",
+      "Portfolio of Alamdar Manafov - 10+ years Business Developer & Marketing Consultant | Founder of Be Positive Life Planner.",
     images: ["/og-image.jpg"],
   },
   icons: {

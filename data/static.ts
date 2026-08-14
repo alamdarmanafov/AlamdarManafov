@@ -9,7 +9,7 @@ export const staticData = {
     },
     hero: {
       title: "Welcome to My Portfolio",
-      subtitle: "Marketing & Branding Specialist | Instructor",
+      subtitle: "Business Developer & Marketing Consultant | Trainer",
       description: "I believe that positive thinking, the right strategy, and strong content can change everything. ‘Be Positive’ is not just a brand – it’s a lifestyle."
     },
     footer: {
@@ -27,7 +27,7 @@ export const staticData = {
     },
     hero: {
       title: "Portfolio Səhifəmə Xoş Gəlmisiniz",
-      subtitle: "Marketinq & Brendinq Mütəxəssisi | Təlimçi",
+      subtitle: "Business Developer & Marketinq Konsultant | Təlimçi",
       description: "Mən inanıram ki, müsbət düşüncə, doğru strategiya və güclü kontent hər şeyi dəyişə bilər. ‘Be Positive’ sadəcə brend deyil – bir həyat tərzidir."
     },
     footer: {
