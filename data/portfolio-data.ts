@@ -24,7 +24,7 @@ export const portfolioData = {
       title: "Be Positive Life Planner",
       description: "Plan your day.Stay focused.Feel positive.",
       image: "/img/portfolio/2.svg",
-      category: "Publishing",
+      category: "SaaS",
       link: "https://bepositive.cc",
       technologies: ["SaaS", "Planner", "Productivity"]
     },
@@ -33,7 +33,7 @@ export const portfolioData = {
       title: "Consultation",
       description: "Business and Marketing consultation services",
       image: "/img/portfolio/3.svg",
-      category: "services",
+      category: "Services",
       link: "https://wa.me/994105310129",
       technologies: ["Consultation", "Social Media", "Business"]
     }
@@ -53,7 +53,7 @@ export const portfolioData = {
       title: "Be Positive Life Planner",
       description: "Plan your day.Stay focused.Feel positive.",
       image: "/img/portfolio/2.svg",
-      category: "saas",
+      category: "SaaS",
       link: "https://bepositive.cc",
       technologies: ["SaaS", "Planner", "Productivity"]
     },
@@ -62,7 +62,7 @@ export const portfolioData = {
       title: "Konsultasiya",
       description: "Biznes və Marketinq üzrə konsultasiya xidmətləri",
       image: "/img/portfolio/3.svg",
-      category: "Təhsil",
+      category: "Xidmət",
       link: "https://wa.me/994105310129",
       technologies: ["Konsultasiya", "Sosial Media", "biznes"]
     }

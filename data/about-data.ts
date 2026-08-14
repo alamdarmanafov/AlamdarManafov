@@ -9,7 +9,7 @@ export const aboutData = {
     },
     career: {
       title: "Professional Career",
-      description: "I am a Business Developer & Marketing Consultant with 10+ years of experience, the founder of the “BePositive.az” brand and the author of a personalized content approach model. During my career, I have collaborated with singers, actors, entrepreneurs, and dozens of social media and brand development companies.Since 2024, I have been providing reel shooting, editing, social media content planning, and brand visual development for the individual and business company Be Positive, which I founded.",
+      description: "I have been working in marketing, branding, and digital communication since 2018. I am a Business Developer & Marketing Consultant with 10+ years of professional experience and the Founder of Be Positive, established in 2021. Throughout my career, I have collaborated with singers, actors, entrepreneurs, personal brands, and various companies. My expertise includes marketing strategy, branding, social media management, content planning, and business development. I am the author of a personalized content approach model focused on creating effective and engaging content strategies. Through Be Positive, I provide Reels production and editing, social media strategy, content planning, and brand visual development. I work with professional tools and platforms including **Meta Ads Manager, Google Ads, Google Analytics, Canva, Adobe Photoshop, Adobe Premiere Pro, and CapCut**. I combine creative thinking with strategic marketing solutions to help businesses and personal brands grow. My approach is built around strategy, creativity, and measurable results. **Be Positive is more than a brand — it is a way of thinking, creating, and growing.**",
       company: "BePositive.az"
     },
     books: {
@@ -37,8 +37,8 @@ export const aboutData = {
     },
     career: {
       title: "Professional Karyera",
-      description: "10+ illik təcrübəyə malik Business Developer & Marketing Consultant, “BePositive.az” brendinin təsisçisi və kontent üzrə fərdiləşdirilmiş yanaşma modelinin müəllifiyəm. Karyeram ərzində müğənnilər, aktyorlar, sahibkarlar və şirkətlərlə sosial media və brend inkişafı üzrə əməkdaşlıq etmişəm. 2024-cü ildən etibarən qurduğum Be Positive şirkəti vasitəsilə fərdi və biznes müştərilər üçün reels çəkilişi, montaj, sosial media kontent planlaması və brendin vizual inkişafı xidmətlərini təqdim edirәm.",
-      company: "BePositive.az"
+      description: "2018-ci ildən bəri marketinq, brendinq və rəqəmsal kommunikasiya sahəsində çalışıram. 10 ildən çox peşəkar təcrübəyə malik Biznes İnkişaf Etdiricisi və Marketinq Məsləhətçisiyəm və 2021-ci ildə qurulan Be Positive şirkətinin təsisçisiyəm. Karyeram boyunca müğənnilər, aktyorlar, sahibkarlar, şəxsi brendlər və müxtəlif şirkətlərlə əməkdaşlıq etmişəm. Təcrübəmə marketinq strategiyası, brendinq, sosial media idarəetməsi, kontent planlaşdırması və biznesin inkişafı daxildir. Effektiv və cəlbedici kontent strategiyaları yaratmağa yönəlmiş fərdiləşdirilmiş kontent yanaşması modelinin müəllifiyəm. Be Positive vasitəsilə Reels istehsalı və redaktəsini, sosial media strategiyasını, kontent planlaşdırmasını və brend vizual inkişafını təmin edirəm. **Meta Ads Manager, Google Ads, Google Analytics, Canva, Adobe Photoshop, Adobe Premiere Pro və CapCut** daxil olmaqla peşəkar alətlər və platformalarla işləyirəm. Bizneslərin və şəxsi brendlərin böyüməsinə kömək etmək üçün yaradıcı düşüncəni strateji marketinq həlləri ilə birləşdirirəm. Mənim yanaşmam strategiya, yaradıcılıq və ölçülə bilən nəticələr ətrafında qurulub. **Be Positive sadəcə bir brenddən daha çox şeydir — bu, düşüncə, yaratmaq və böyümək yoludur.**",
+      company: "Be Positive Advertising Agency"
     },
     books: {
       title: "Kitab və Uğurlar",
@@ -48,8 +48,8 @@ export const aboutData = {
     hobbies: {
       title: "Hobbilər",
       activities: [
-        { icon: "running", text: "Qaçış" },
-        { icon: "heart", text: "Fitneslə məşğul olmaq" },
+        { icon: "running", text: "Running" },
+        { icon: "heart", text: "Fitness" },
         { icon: "users", text: "İnsanlarla ünsiyyət" }
       ],
       motto: "Həyat şüarı: #BePositive"
