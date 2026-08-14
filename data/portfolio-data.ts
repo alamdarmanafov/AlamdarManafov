@@ -26,7 +26,7 @@ export const portfolioData = {
       image: "/img/portfolio/2.svg",
       category: "Publishing",
       link: "https://bepositive.cc",
-      technologies: ["Book", "Marketing", "Strategy"]
+      technologies: ["SaaS", "Planner", "Productivity"]
     },
     {
       id: "3",
@@ -55,7 +55,7 @@ export const portfolioData = {
       image: "/img/portfolio/2.svg",
       category: "saas",
       link: "https://bepositive.cc",
-      technologies: ["Kitab", "Marketinq", "Strategiya"]
+      technologies: ["SaaS", "Planner", "Productivity"]
     },
     {
       id: "3",
