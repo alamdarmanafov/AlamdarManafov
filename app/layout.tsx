@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ələmdar Manafov | Business Developer & Marketinq Konsultant",
+  title: "Alamdar Manafov | Business Developer & Marketing Consultant",
   description:
     "Portfolio of Alamdar Manafov - 10+ years Business Developer & Marketing Consultant | Founder of Be Positive Life Planner.",
   keywords: [

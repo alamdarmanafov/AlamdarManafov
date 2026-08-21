@@ -326,7 +326,7 @@ export default function Contact() {
                       placeholder={
                         language === "en"
                           ? "john@example.com"
-                          : "alamder@example.com"
+                          : "alamdar@example.com"
                       }
                       required
                     />
