@@ -118,6 +118,16 @@ export default function Navbar({ sections, scrollY }: NavbarProps) {
             </motion.button>
           ))}
 
+          <Link href="/generator">
+            <motion.span
+              className="px-4 py-2 rounded-full bg-[#0808c1] text-white text-sm font-medium whitespace-nowrap inline-block"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Generator
+            </motion.span>
+          </Link>
+
           {/* Language Selector */}
           <div className="relative">
             <button
@@ -257,6 +267,15 @@ export default function Navbar({ sections, scrollY }: NavbarProps) {
               )}
             </AnimatePresence>
           </div>
+
+          <Link href="/generator">
+            <motion.span
+              className="px-3 py-1.5 rounded-full bg-[#0808c1] text-white text-xs font-medium whitespace-nowrap inline-block"
+              whileTap={{ scale: 0.95 }}
+            >
+              Generator
+            </motion.span>
+          </Link>
 
           <button onClick={() => setIsOpen(!isOpen)} className="text-[#0808c1] focus:outline-none">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
