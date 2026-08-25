@@ -1,18 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
-  <defs>
-    <pattern id="stripes" patternUnits="userSpaceOnUse" width="48" height="48" patternTransform="rotate(115)">
-      <rect width="48" height="48" fill="#161311" />
-      <rect width="16" height="48" fill="#f7f3ec" opacity="0.08" />
-    </pattern>
-  </defs>
-  <rect width="400" height="400" fill="#161311" />
-  <rect width="400" height="400" fill="url(#stripes)" />
-  <circle cx="200" cy="180" r="70" fill="none" stroke="#e0a530" stroke-width="6" />
-  <path d="M170 150 h60 v55 a30 30 0 0 1 -60 0 z" fill="#e0a530" />
-  <path d="M230 165 h14 a16 16 0 0 1 0 32 h-8" fill="none" stroke="#e0a530" stroke-width="6" />
-  <path d="M178 128 q6 -14 0 -24" fill="none" stroke="#e0a530" stroke-width="5" stroke-linecap="round" />
-  <path d="M200 128 q6 -14 0 -24" fill="none" stroke="#e0a530" stroke-width="5" stroke-linecap="round" />
-  <path d="M222 128 q6 -14 0 -24" fill="none" stroke="#e0a530" stroke-width="5" stroke-linecap="round" />
-  <text x="200" y="300" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#f7f3ec" text-anchor="middle">ZEBRA</text>
-  <text x="200" y="336" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#e0a530" text-anchor="middle" letter-spacing="4">COFFEE</text>
+  <rect width="400" height="400" fill="#0E7490" />
+  <circle cx="200" cy="180" r="70" fill="none" stroke="#ffffff" stroke-width="6" />
+  <path d="M170 150 h60 v55 a30 30 0 0 1 -60 0 z" fill="#ffffff" />
+  <path d="M230 165 h14 a16 16 0 0 1 0 32 h-8" fill="none" stroke="#ffffff" stroke-width="6" />
+  <path d="M178 128 q6 -14 0 -24" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" />
+  <path d="M200 128 q6 -14 0 -24" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" />
+  <path d="M222 128 q6 -14 0 -24" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" />
+  <text x="200" y="300" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#ffffff" text-anchor="middle">ZEBRA</text>
+  <text x="200" y="336" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="4">COFFEE</text>
 </svg>
