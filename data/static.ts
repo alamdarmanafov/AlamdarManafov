@@ -1,5 +1,8 @@
 export const staticData = {
   en: {
+    meta: {
+      title: "Alamdar Manafov | Business Developer & Marketing Consultant"
+    },
     nav: {
       home: "Home",
       about: "About",
@@ -18,6 +21,9 @@ export const staticData = {
     }
   },
   az: {
+    meta: {
+      title: "Ələmdar Manafov | Business Developer & Marketing Konsultant"
+    },
     nav: {
       home: "Ana Səhifə",
       about: "Haqqımda",

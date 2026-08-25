@@ -9,6 +9,7 @@ import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import ParticleBackground from "@/components/particle-background"
 import Portfolio from "@/components/portfolio"
+import DocumentTitle from "@/components/document-title"
 import { LanguageProvider } from "@/contexts/LanguageContext"
 
 export default function Home() {
@@ -38,6 +39,7 @@ export default function Home() {
 
   return (
     <LanguageProvider>
+      <DocumentTitle />
       <main className="relative min-h-screen bg-white overflow-hidden">
         <ParticleBackground />
         <Navbar sections={sections} scrollY={scrollY} />
