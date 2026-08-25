@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560">
+  <defs>
+    <linearGradient id="mebelBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#faf7f2"/>
+      <stop offset="100%" stop-color="#f0e6d6"/>
+    </linearGradient>
+    <linearGradient id="mebelWood" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8a5a34"/>
+      <stop offset="100%" stop-color="#5c3a21"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="560" fill="url(#mebelBg)"/>
+
+  <circle cx="640" cy="120" r="180" fill="#c8a24d" opacity="0.18"/>
+  <circle cx="90" cy="480" r="140" fill="#5c3a21" opacity="0.10"/>
+
+  <!-- Sofa silhouette -->
+  <g transform="translate(150,220)">
+    <rect x="0" y="90" width="500" height="30" rx="15" fill="url(#mebelWood)"/>
+    <rect x="20" y="40" width="460" height="70" rx="24" fill="url(#mebelWood)"/>
+    <rect x="0" y="30" width="70" height="100" rx="20" fill="#5c3a21"/>
+    <rect x="430" y="30" width="70" height="100" rx="20" fill="#5c3a21"/>
+    <rect x="40" y="120" width="24" height="40" rx="6" fill="#3a2413"/>
+    <rect x="436" y="120" width="24" height="40" rx="6" fill="#3a2413"/>
+    <rect x="90" y="10" width="120" height="55" rx="16" fill="#c8a24d" opacity="0.85"/>
+    <rect x="290" y="10" width="120" height="55" rx="16" fill="#c8a24d" opacity="0.85"/>
+  </g>
+
+  <text x="400" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#3a2413">ARDIC Mebel</text>
+  <text x="400" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#6b5946">Nümunə portfolio sayt</text>
+</svg>
