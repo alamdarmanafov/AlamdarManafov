@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native'
+import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native'
 import MoodPicker from '../components/MoodPicker'
+import { fetchAiCoachMessage } from '../aiCoach'
 import { generateCoachMessage } from '../coach'
 import { colors, radius } from '../theme'
 import type { JournalEntry, MoodKey } from '../types'
@@ -14,10 +15,14 @@ export default function TodayScreen({ onSave }: TodayScreenProps) {
   const [note, setNote] = useState('')
   const [gratitude, setGratitude] = useState('')
   const [coachMessage, setCoachMessage] = useState<string | null>(null)
+  const [loading, setLoading] = useState(false)
 
-  const handleReflect = () => {
+  const handleReflect = async () => {
     if (!mood) return
-    setCoachMessage(generateCoachMessage(mood, note))
+    setLoading(true)
+    const aiMessage = await fetchAiCoachMessage(mood, note, gratitude)
+    setCoachMessage(aiMessage ?? generateCoachMessage(mood, note))
+    setLoading(false)
   }
 
   const handleSave = () => {
@@ -71,11 +76,15 @@ export default function TodayScreen({ onSave }: TodayScreenProps) {
 
       {!coachMessage ? (
         <Pressable
-          style={[styles.primaryButton, !mood && styles.primaryButtonDisabled]}
+          style={[styles.primaryButton, (!mood || loading) && styles.primaryButtonDisabled]}
           onPress={handleReflect}
-          disabled={!mood}
+          disabled={!mood || loading}
         >
-          <Text style={styles.primaryButtonText}>Paylaş və məsləhət al</Text>
+          {loading ? (
+            <ActivityIndicator color="#ffffff" />
+          ) : (
+            <Text style={styles.primaryButtonText}>Paylaş və məsləhət al</Text>
+          )}
         </Pressable>
       ) : (
         <View style={styles.coachCard}>

@@ -1,4 +1,4 @@
-import Anthropic from "@anthropic-ai/sdk"
+import { ApiError, GoogleGenAI, ThinkingLevel } from "@google/genai"
 import { NextResponse } from "next/server"
 import { z } from "zod"
 
@@ -16,7 +16,7 @@ const MOOD_LABELS: Record<string, string> = {
   great: "əla",
 }
 
-const SYSTEM_PROMPT =
+const SYSTEM_INSTRUCTION =
   'Sən "Be Positive" tətbiqinin mehriban, dəstəkləyici əhval-ruhiyyə koçusan. ' +
   "İstifadəçi əhvalını və qeydini paylaşır, sən Azərbaycan dilində 2-3 qısa " +
   "cümlədən ibarət, isti və konkret bir kiçik addım təklif edən mesaj yazırsan. " +
@@ -36,7 +36,7 @@ export function OPTIONS() {
 }
 
 export async function POST(request: Request) {
-  const apiKey = process.env.ANTHROPIC_API_KEY
+  const apiKey = process.env.GEMINI_API_KEY
   if (!apiKey) {
     return NextResponse.json(
       { error: "AI service not configured" },
@@ -69,19 +69,21 @@ export async function POST(request: Request) {
     .filter(Boolean)
     .join("\n")
 
-  const client = new Anthropic({ apiKey })
+  const ai = new GoogleGenAI({ apiKey })
 
   try {
-    const response = await client.messages.create({
-      model: "claude-opus-5",
-      max_tokens: 300,
-      system: SYSTEM_PROMPT,
-      output_config: { effort: "low" },
-      messages: [{ role: "user", content: userMessage }],
+    const response = await ai.models.generateContent({
+      model: "gemini-3.6-flash",
+      contents: userMessage,
+      config: {
+        systemInstruction: SYSTEM_INSTRUCTION,
+        maxOutputTokens: 1024,
+        temperature: 0.8,
+        thinkingConfig: { thinkingLevel: ThinkingLevel.MINIMAL },
+      },
     })
 
-    const textBlock = response.content.find((block) => block.type === "text")
-    const message = textBlock && "text" in textBlock ? textBlock.text.trim() : ""
+    const message = response.text?.trim() ?? ""
 
     if (!message) {
       return NextResponse.json(
@@ -92,16 +94,17 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ message }, { headers: corsHeaders() })
   } catch (error) {
-    if (error instanceof Anthropic.RateLimitError) {
-      return NextResponse.json({ error: "Rate limited" }, { status: 429, headers: corsHeaders() })
-    }
-    if (error instanceof Anthropic.AuthenticationError) {
-      return NextResponse.json(
-        { error: "AI service misconfigured" },
-        { status: 503, headers: corsHeaders() }
-      )
-    }
-    if (error instanceof Anthropic.APIError) {
+    console.error("[/api/coach]", error)
+    if (error instanceof ApiError) {
+      if (error.status === 401 || error.status === 403) {
+        return NextResponse.json(
+          { error: "AI service misconfigured" },
+          { status: 503, headers: corsHeaders() }
+        )
+      }
+      if (error.status === 429) {
+        return NextResponse.json({ error: "Rate limited" }, { status: 429, headers: corsHeaders() })
+      }
       return NextResponse.json({ error: "AI service error" }, { status: 502, headers: corsHeaders() })
     }
     return NextResponse.json({ error: "Unknown error" }, { status: 500, headers: corsHeaders() })
