@@ -20,7 +20,7 @@ export const aboutData = {
     hobbies: {
       title: "Hobbies",
       activities: [
-        { icon: "running", text: "Running" },
+        { icon: "bike", text: "Running" },
         { icon: "heart", text: "Fitness" },
         { icon: "users", text: "Socializing" }
       ],
@@ -36,7 +36,7 @@ export const aboutData = {
       education: "AZTU Məzunu"
     },
     career: {
-      title: "Professional Karyera",
+      title: "Peşəkar Karyera",
       description: "2018-ci ildən bəri marketinq, brendinq və rəqəmsal kommunikasiya sahəsində çalışıram. 10 ildən çox peşəkar təcrübəyə malik Biznes İnkişaf Etdiricisi və Marketinq Məsləhətçisiyəm və 2021-ci ildə qurulan Be Positive şirkətinin təsisçisiyəm. Karyeram boyunca müğənnilər, aktyorlar, sahibkarlar, şəxsi brendlər və müxtəlif şirkətlərlə əməkdaşlıq etmişəm. Təcrübəmə marketinq strategiyası, brendinq, sosial media idarəetməsi, kontent planlaşdırması və biznesin inkişafı daxildir. Effektiv və cəlbedici kontent strategiyaları yaratmağa yönəlmiş fərdiləşdirilmiş kontent yanaşması modelinin müəllifiyəm. Be Positive vasitəsilə Reels istehsalı və redaktəsini, sosial media strategiyasını, kontent planlaşdırmasını və brend vizual inkişafını təmin edirəm. **Meta Ads Manager, Google Ads, Google Analytics, Canva, Adobe Photoshop, Adobe Premiere Pro və CapCut** daxil olmaqla peşəkar alətlər və platformalarla işləyirəm. Bizneslərin və şəxsi brendlərin böyüməsinə kömək etmək üçün yaradıcı düşüncəni strateji marketinq həlləri ilə birləşdirirəm. Mənim yanaşmam strategiya, yaradıcılıq və ölçülə bilən nəticələr ətrafında qurulub. **Be Positive sadəcə bir brenddən daha çox şeydir — bu, düşüncə, yaratmaq və böyümək yoludur.**",
       company: "Be Positive Advertising Agency"
     },
@@ -48,7 +48,7 @@ export const aboutData = {
     hobbies: {
       title: "Hobbilər",
       activities: [
-        { icon: "running", text: "Running" },
+        { icon: "bike", text: "Running" },
         { icon: "heart", text: "Fitness" },
         { icon: "users", text: "İnsanlarla ünsiyyət" }
       ],
