@@ -36,6 +36,15 @@ export const portfolioData = {
       category: "Services",
       link: "https://wa.me/994105310129",
       technologies: ["Consultation", "Social Media", "Business"]
+    },
+    {
+      id: "4",
+      title: "Zebra Coffee",
+      description: "Coffee shop landing page design concept",
+      image: "/img/portfolio/zebra-coffee.svg",
+      category: "Web Design",
+      link: "/zebra-coffee",
+      technologies: ["Next.js", "Web Design", "Branding"]
     }
   ],
   az: [
@@ -65,6 +74,15 @@ export const portfolioData = {
       category: "Xidmət",
       link: "https://wa.me/994105310129",
       technologies: ["Konsultasiya", "Sosial Media", "biznes"]
+    },
+    {
+      id: "4",
+      title: "Zebra Coffee",
+      description: "Coffee shop üçün hazırlanmış sayt dizayn nümunəsi",
+      image: "/img/portfolio/zebra-coffee.svg",
+      category: "Veb Dizayn",
+      link: "/zebra-coffee",
+      technologies: ["Next.js", "Veb Dizayn", "Brendinq"]
     }
   ]
 } 
