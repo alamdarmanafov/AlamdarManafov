@@ -36,7 +36,7 @@ function ZebraStripes({ className = "" }: { className?: string }) {
       className={`absolute inset-0 opacity-[0.06] ${className}`}
       style={{
         backgroundImage:
-          "repeating-linear-gradient(115deg, #000 0, #000 14px, transparent 14px, transparent 34px)",
+          "repeating-linear-gradient(115deg, #0A3D4E 0, #0A3D4E 14px, transparent 14px, transparent 34px)",
       }}
     />
   )
@@ -44,9 +44,9 @@ function ZebraStripes({ className = "" }: { className?: string }) {
 
 export default function ZebraCoffee() {
   return (
-    <main className="relative min-h-screen bg-[#F3F7F8] text-[#0E1A1F]">
+    <main className="relative min-h-screen bg-[#F3F7F8] text-[#0A3D4E]">
       {/* Utility bar */}
-      <div className="bg-[#0E1A1F] text-[#F3F7F8] text-xs md:text-sm">
+      <div className="bg-[#0A3D4E] text-[#F3F7F8] text-xs md:text-sm">
         <div className="max-w-6xl mx-auto px-6 md:px-12 py-2 flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1">
@@ -94,7 +94,7 @@ export default function ZebraCoffee() {
             href={zebraCoffeeInfo.wolt}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 rounded-full bg-[#0E1A1F] text-[#F3F7F8] text-sm font-semibold hover:bg-[#0E7490] hover:text-[#0E1A1F] transition-colors"
+            className="px-5 py-2.5 rounded-full bg-[#0A3D4E] text-[#F3F7F8] text-sm font-semibold hover:bg-[#0E7490] hover:text-[#0A3D4E] transition-colors"
           >
             Sifariş et
           </a>
@@ -110,7 +110,7 @@ export default function ZebraCoffee() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <span className="inline-block px-3 py-1 rounded-full bg-[#0E1A1F]/5 text-xs font-semibold uppercase tracking-wider mb-4">
+            <span className="inline-block px-3 py-1 rounded-full bg-[#0A3D4E]/5 text-xs font-semibold uppercase tracking-wider mb-4">
               Bakı, Xəqani prospekti
             </span>
             <h1 className="text-5xl md:text-6xl font-extrabold leading-[1.05] mb-6">
@@ -118,7 +118,7 @@ export default function ZebraCoffee() {
               <br />
               <span className="text-[#0E7490]">qəhvə mədəniyyəti.</span>
             </h1>
-            <p className="text-lg text-[#0E1A1F]/70 max-w-md mb-8">
+            <p className="text-lg text-[#0A3D4E]/70 max-w-md mb-8">
               Zebra Coffee — gündəlik ritmə uyğun sürətli, səmimi və dadlı qəhvə
               təcrübəsi. Yerində otur, ya da yolda apar.
             </p>
@@ -128,7 +128,7 @@ export default function ZebraCoffee() {
                 href={zebraCoffeeInfo.wolt}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-6 py-3 rounded-full bg-[#0E1A1F] text-[#F3F7F8] font-semibold hover:bg-[#0E7490] hover:text-[#0E1A1F] transition-colors"
+                className="flex items-center gap-2 px-6 py-3 rounded-full bg-[#0A3D4E] text-[#F3F7F8] font-semibold hover:bg-[#0E7490] hover:text-[#0A3D4E] transition-colors"
               >
                 <ShoppingBag size={18} />
                 Wolt-da sifariş et
@@ -137,7 +137,7 @@ export default function ZebraCoffee() {
                 href={mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-6 py-3 rounded-full border-2 border-[#0E1A1F] font-semibold hover:bg-[#0E1A1F] hover:text-[#F3F7F8] transition-colors"
+                className="flex items-center gap-2 px-6 py-3 rounded-full border-2 border-[#0A3D4E] font-semibold hover:bg-[#0A3D4E] hover:text-[#F3F7F8] transition-colors"
               >
                 <MapPin size={18} />
                 Yol tarifi
@@ -166,7 +166,7 @@ export default function ZebraCoffee() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="relative aspect-square rounded-[2rem] bg-[#0E1A1F] overflow-hidden shadow-2xl"
+            className="relative aspect-square rounded-[2rem] bg-[#0A3D4E] overflow-hidden shadow-2xl"
           >
             <div
               className="absolute inset-0 opacity-20"
@@ -187,7 +187,7 @@ export default function ZebraCoffee() {
         <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Haqqımızda</h2>
           <div className="w-16 h-1 bg-[#0E7490] mx-auto mb-6" />
-          <p className="text-[#0E1A1F]/70 text-lg leading-relaxed">
+          <p className="text-[#0A3D4E]/70 text-lg leading-relaxed">
             Zebra Coffee — Xəqani prospektində sadə və səmimi bir dayanacaq.
             Məqsədimiz sadədir: hər fincanda sabit dad, sürətli xidmət və
             isti ünsiyyət. İstər sürətli bir "quick stop", istərsə də
@@ -202,7 +202,7 @@ export default function ZebraCoffee() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Menyu</h2>
             <div className="w-16 h-1 bg-[#0E7490] mx-auto mb-4" />
-            <p className="text-sm text-[#0E1A1F]/50">
+            <p className="text-sm text-[#0A3D4E]/50">
               * Nümunə menyu — dizayn konsepti üçün hazırlanıb, qiymətlər
               illüstrativdir.
             </p>
@@ -248,7 +248,7 @@ export default function ZebraCoffee() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
-                className="relative aspect-square rounded-2xl bg-[#0E1A1F] overflow-hidden flex items-end p-4"
+                className="relative aspect-square rounded-2xl bg-[#0A3D4E] overflow-hidden flex items-end p-4"
               >
                 <div
                   className="absolute inset-0 opacity-20"
@@ -267,7 +267,7 @@ export default function ZebraCoffee() {
       </section>
 
       {/* Location & contact */}
-      <section id="mekan" className="py-20 bg-[#0E1A1F] text-[#F3F7F8]">
+      <section id="mekan" className="py-20 bg-[#0A3D4E] text-[#F3F7F8]">
         <div className="max-w-5xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12">
           <div>
             <h2 className="text-3xl font-bold mb-6">Məkan &amp; İş saatları</h2>
@@ -300,7 +300,7 @@ export default function ZebraCoffee() {
               href={mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-full bg-[#0E7490] text-[#0E1A1F] font-semibold hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-full bg-[#0E7490] text-[#0A3D4E] font-semibold hover:opacity-90 transition-opacity"
             >
               <MapPin size={18} />
               Xəritədə aç
@@ -313,7 +313,7 @@ export default function ZebraCoffee() {
               href={zebraCoffeeInfo.wolt}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between px-6 py-4 rounded-2xl bg-[#F3F7F8] text-[#0E1A1F] font-semibold hover:bg-[#0E7490] transition-colors"
+              className="flex items-center justify-between px-6 py-4 rounded-2xl bg-[#F3F7F8] text-[#0A3D4E] font-semibold hover:bg-[#0E7490] transition-colors"
             >
               <span className="flex items-center gap-3">
                 <ShoppingBag size={20} />
@@ -325,7 +325,7 @@ export default function ZebraCoffee() {
               href={zebraCoffeeInfo.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between px-6 py-4 rounded-2xl bg-[#F3F7F8] text-[#0E1A1F] font-semibold hover:bg-[#0E7490] transition-colors"
+              className="flex items-center justify-between px-6 py-4 rounded-2xl bg-[#F3F7F8] text-[#0A3D4E] font-semibold hover:bg-[#0E7490] transition-colors"
             >
               <span className="flex items-center gap-3">
                 <Instagram size={20} />
@@ -338,7 +338,7 @@ export default function ZebraCoffee() {
       </section>
 
       {/* Footer */}
-      <footer className="py-10 text-center text-sm text-[#0E1A1F]/50">
+      <footer className="py-10 text-center text-sm text-[#0A3D4E]/50">
         <p>
           Bu, Zebra Coffee üçün hazırlanmış dizayn nümunəsidir ·{" "}
           <Link href="/" className="underline hover:text-[#0E7490]">
