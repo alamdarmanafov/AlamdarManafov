@@ -51,11 +51,11 @@ export const portfolioData = {
     {
       id: "2",
       title: "Be Positive Life Planner",
-      description: "Plan your day.Stay focused.Feel positive.",
+      description: "Gününü planla. Fokuslu qal. Pozitiv hiss et.",
       image: "/img/portfolio/2.svg",
       category: "SaaS",
       link: "https://bepositive.cc",
-      technologies: ["SaaS", "Planner", "Productivity"]
+      technologies: ["SaaS", "Planlayıcı", "Məhsuldarlıq"]
     },
     {
       id: "3",
