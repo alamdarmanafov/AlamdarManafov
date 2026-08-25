@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.120.0",
     "@emailjs/browser": "^4.4.1",
     "@emotion/is-prop-valid": "latest",
     "@hookform/resolvers": "^3.9.1",
