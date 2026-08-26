@@ -218,11 +218,11 @@ export default function Contact() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">
+            <div className="bg-white rounded-2xl shadow-xl p-5">
+              <h3 className="text-2xl font-bold text-gray-800 mb-1 px-2 pt-1">
                 {language === "en" ? "Book a Call" : "Görüş Rezerv Et"}
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-3 px-2">
                 {language === "en"
                   ? "Pick a time that works for you and let's talk about your project."
                   : "Sizə uyğun vaxtı seçin, layihəniz haqqında danışaq."}
@@ -233,9 +233,9 @@ export default function Contact() {
                 strategy="lazyOnload"
               />
               <div
-                className="calendly-inline-widget"
-                data-url="https://calendly.com/alamdarmanafov/30min"
-                style={{ minWidth: "280px", height: "630px" }}
+                className="calendly-inline-widget rounded-xl overflow-hidden"
+                data-url="https://calendly.com/alamdarmanafov/30min?hide_event_type_details=1&background_color=ffffff"
+                style={{ minWidth: "280px", height: "480px" }}
               />
             </div>
           </motion.div>
