@@ -4,7 +4,6 @@ import { useEffect, useState, useRef } from "react"
 import Navbar from "@/components/navbar"
 import Hero from "@/components/hero"
 import About from "@/components/about"
-import Services from "@/components/services"
 import Podcast from "@/components/podcast"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
@@ -25,7 +24,6 @@ export default function Home() {
   }, [])
 
   const aboutRef = useRef<HTMLElement | null>(null)
-  const servicesRef = useRef<HTMLElement | null>(null)
   const podcastRef = useRef<HTMLElement | null>(null)
   const contactRef = useRef<HTMLElement | null>(null)
   const portfolioRef = useRef<HTMLElement | null>(null)
@@ -33,7 +31,6 @@ export default function Home() {
   const sections = [
     { id: "home", label: "Ana səhifə", ref: null },
     { id: "about", label: "Haqqımda", ref: aboutRef },
-    { id: "services", label: "Xidmətlər", ref: servicesRef },
     { id: "podcast", label: "Podkastlar", ref: podcastRef },
     { id: "portfolio", label: "Portfolio", ref: portfolioRef },
     { id: "contact", label: "Əlaqə", ref: contactRef },
@@ -51,10 +48,6 @@ export default function Home() {
 
         <section id="about" ref={aboutRef} className="relative">
           <About />
-        </section>
-
-        <section id="services" ref={servicesRef} className="relative">
-          <Services />
         </section>
 
         <section id="podcast" ref={podcastRef} className="relative">
