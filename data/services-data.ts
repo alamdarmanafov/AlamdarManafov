@@ -35,7 +35,7 @@ export const servicesData = {
       },
       {
         icon: "globe",
-        title: "Paid Advertising",
+        title: "Performance Advertising",
         description: "Global paid media campaigns across Meta Ads, Google Ads, and TikTok Ads to reach international audiences."
       },
       {
@@ -81,7 +81,7 @@ export const servicesData = {
       },
       {
         icon: "globe",
-        title: "Paid Advertising",
+        title: "Performance Reklam",
         description: "Beynəlxalq auditoriyaya çatmaq üçün Meta Ads, Google Ads və TikTok Ads üzrə qlobal ödənişli reklam kampaniyaları."
       },
       {
