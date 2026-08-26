@@ -4,7 +4,7 @@ import { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"
 import { useInView } from "framer-motion"
-import { Heart, Book, GraduationCap, Briefcase, Bike, Users } from "lucide-react"
+import { Heart, Book, GraduationCap, Briefcase, Bike, Users, Footprints } from "lucide-react"
 import { useLanguage } from "@/contexts/LanguageContext"
 import { aboutData } from "@/data/about-data"
 
@@ -132,6 +132,7 @@ export default function About() {
               {aboutData[language].hobbies.activities.map((activity, index) => (
                 <div key={index} className="flex items-center gap-3">
                   {activity.icon === 'bike' && <Bike size={20} className="text-[#0808c1]" />}
+                  {activity.icon === 'running' && <Footprints size={20} className="text-[#0808c1]" />}
                   {activity.icon === 'heart' && <Heart size={20} className="text-[#0808c1]" />}
                   {activity.icon === 'users' && <Users size={20} className="text-[#0808c1]" />}
                   <span className="text-gray-600">{activity.text}</span>
