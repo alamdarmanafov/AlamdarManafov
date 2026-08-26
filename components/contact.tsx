@@ -47,13 +47,14 @@ export default function Contact() {
           </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
           <motion.div
+            className="h-full"
             initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="bg-white rounded-2xl shadow-xl p-8 relative overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-xl p-8 relative overflow-hidden h-full">
               <div className="absolute top-0 right-0 w-40 h-40 bg-[#0808c1]/5 rounded-full -mr-20 -mt-20" />
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#fff45c]/5 rounded-full -ml-16 -mb-16" />
 
@@ -214,11 +215,12 @@ export default function Contact() {
           </motion.div>
 
           <motion.div
+            className="h-full"
             initial={{ opacity: 0, x: 20 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <div className="bg-white rounded-2xl shadow-xl p-5">
+            <div className="bg-white rounded-2xl shadow-xl p-5 h-full flex flex-col">
               <h3 className="text-2xl font-bold text-gray-800 mb-1 px-2 pt-1">
                 {language === "en" ? "Book a Call" : "Görüş Rezerv Et"}
               </h3>
@@ -233,9 +235,9 @@ export default function Contact() {
                 strategy="lazyOnload"
               />
               <div
-                className="calendly-inline-widget rounded-xl overflow-hidden"
+                className="calendly-inline-widget rounded-xl overflow-hidden flex-1"
                 data-url="https://calendly.com/alamdarmanafov/30min?hide_event_type_details=1&background_color=ffffff"
-                style={{ minWidth: "280px", height: "480px" }}
+                style={{ minWidth: "280px", minHeight: "320px" }}
               />
             </div>
           </motion.div>
