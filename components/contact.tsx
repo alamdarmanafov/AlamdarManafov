@@ -5,7 +5,7 @@ import type React from "react";
 import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useInView } from "framer-motion";
-import { Send, Mail, Phone, MapPin } from "lucide-react";
+import { Send, Mail, Phone, MapPin, Calendar } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { staticData } from "@/data/static";
@@ -146,6 +146,29 @@ export default function Contact() {
                     <p className="text-gray-600">+994 10-531-01-29</p>
                   </div>
                 </motion.div>
+
+                <motion.a
+                  href="https://calendly.com/alamdarmanafov/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start space-x-4"
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="w-12 h-12 rounded-full bg-[#0808c1]/10 flex items-center justify-center text-[#0808c1]">
+                    <Calendar size={20} />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-medium text-gray-800">
+                      {language === "en" ? "Book a Call" : "Görüş Bron Et"}
+                    </h4>
+                    <p className="text-gray-600">
+                      {language === "en"
+                        ? "Schedule a 30-min consultation"
+                        : "30 dəqiqəlik konsultasiya təyin edin"}
+                    </p>
+                  </div>
+                </motion.a>
 
                 <motion.div
                   className="flex items-start space-x-4"

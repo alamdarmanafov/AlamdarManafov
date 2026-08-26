@@ -79,14 +79,27 @@ export default function Hero() {
               #BePositive✌🏻
             </motion.span>
 
-            <motion.button
-              onClick={handleConsultationClick}
-              className="px-8 py-4 bg-[#0808c1] text-white rounded-full text-lg font-medium shadow-lg hover:shadow-xl transition-all"
-              whileHover={{ scale: 1.05, backgroundColor: "#0606a0" }}
-              whileTap={{ scale: 0.98 }}
-            >
-              {language === 'en' ? 'Join Consultation' : 'Konsultasiyaya qoşul'}
-            </motion.button>
+            <div className="flex flex-wrap gap-4">
+              <motion.button
+                onClick={handleConsultationClick}
+                className="px-8 py-4 bg-[#0808c1] text-white rounded-full text-lg font-medium shadow-lg hover:shadow-xl transition-all"
+                whileHover={{ scale: 1.05, backgroundColor: "#0606a0" }}
+                whileTap={{ scale: 0.98 }}
+              >
+                {language === 'en' ? 'Join Consultation' : 'Konsultasiyaya qoşul'}
+              </motion.button>
+
+              <motion.a
+                href="https://calendly.com/alamdarmanafov/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-white text-[#0808c1] border-2 border-[#0808c1] rounded-full text-lg font-medium shadow-lg hover:shadow-xl transition-all inline-flex items-center"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                {language === 'en' ? 'Book a Call' : '30 dəq. görüş bron et'}
+              </motion.a>
+            </div>
           </motion.div>
         </motion.div>
 

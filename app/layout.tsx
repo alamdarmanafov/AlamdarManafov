@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,80 +16,74 @@ export const metadata: Metadata = {
     "Ələmdar Manafov",
     "Business Developer",
     "Marketing Consultant",
-    "Marketinq konsultant",
-    "Marketinq Mütəxəssisi",
+    "Marketing Specialist",
     "Marketing Strategist",
     "Branding & Digital Expert",
     "Social media advisor",
-    "Marketinq və brendinq mütəxəssisi",
+    "Marketing & Branding Specialist",
     "Digital Experiences",
-    "sosial media məsləhətçisi",
     "smm",
     "Blogger",
     "researcher",
-    "sloqan bepositive",
-    "blogger",
-    "marketinq expert",
-    "marketinq konsultant",
+    "BePositive slogan",
+    "marketing expert",
     "be positive advertising agency",
     "be positive life planner",
     "bepositive.az",
-    "rəqəmsal marketinq agentliyi",
-    "sosial media idarəetməsi",
-    "brendinq və dizayn",
-    "smm mütəxəssis",
-    "reels çəkilişi və montaj",
-    "kontent yaradılması",
-    "reklam planlaması",
+    "digital marketing agency",
+    "social media management",
+    "branding and design",
+    "SMM specialist",
+    "Reels production and editing",
+    "content creation",
+    "advertising planning",
     "influencer marketing",
-    "biznes üçün sosial media",
-    "kiçik biznes üçün marketing",
-    "brend tanıtımı xidmətləri",
-    "satış artıran reklam",
-    "reklam xidməti",
+    "social media for business",
+    "marketing for small business",
+    "brand promotion services",
+    "sales-boosting advertising",
+    "advertising services",
     "marketing agency",
     "digital marketing",
-    "brendinq agentliyi",
-    "sosial media reklamı",
-    "kInstagram reels çəkilişi",
-    "sosial media strategiyası",
-    "instagram reklam",
-    "tiktok reklam",
-    "facebook reklam",
-    "meta reklam",
-    "google reklam",
-    "seo analiz",
-    "seo anlysis",
-    "website develop",
+    "branding agency",
+    "social media advertising",
+    "Instagram Reels production",
+    "social media strategy",
+    "Instagram ads",
+    "TikTok ads",
+    "Facebook ads",
+    "Meta ads",
+    "Google ads",
+    "SEO analysis",
+    "website development",
     "marketing specialist",
     "social media strategist",
     "digital marketing expert",
-    "brand strategistm",
+    "brand strategist",
     "content creator",
-    "rəqəmsal marketinq mütəxəssisi",
-    "sosial media təlimçi",
+    "digital marketing specialist",
+    "social media trainer",
     "smm mentor",
-    "smm təlim",
-    "rəqəmsal marketinq təlimləri",
-    "sosial media kursları",
+    "SMM training",
+    "digital marketing training",
+    "social media courses",
     "Be Positive founder",
-    "kreativ sahibkar",
-    "be pozitiv brend hekayəsi",
+    "creative entrepreneur",
+    "Be Positive brand story",
     "motivational speaker",
-    "personal brand strategist ",
-    "rəqəmsal brend qurucusu",
+    "personal brand strategist",
+    "digital brand builder",
     "content marketing expert",
-    "məzmun yaradıcısı",
     "digital marketing consultant",
     "social media growth expert",
     "creative marketing solutions",
-    "biznes üçün kontent istehsalı",
+    "content production for business",
     "social media ads specialist",
     "SMM masterclass",
     "marketing mentor",
     "digital marketing trainer",
     "marketing manager",
-    "rəqəmsal reklam təlimi",
+    "digital advertising training",
     "Azerbaijani marketing expert",
     "international marketing consultant",
   ],
@@ -125,6 +120,34 @@ export const metadata: Metadata = {
   generator: "v0.dev",
 };
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Alamdar Manafov",
+  alternateName: "Ələmdar Manafov",
+  url: "https://alamdarmanafov.com",
+  image: "https://alamdarmanafov.com/img/AlemdarManafovPerson.jpg",
+  jobTitle: "Business Developer & Marketing Consultant",
+  description:
+    "Business Developer & Marketing Consultant with 10+ years of experience. Founder of Be Positive.",
+  worksFor: {
+    "@type": "Organization",
+    name: "Be Positive",
+    url: "https://bepositive.az",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Baku",
+    addressCountry: "AZ",
+  },
+  sameAs: [
+    "https://www.linkedin.com/in/alamdarmanafov/",
+    "https://www.facebook.com/alamdarmanafov/",
+    "https://www.instagram.com/alamdarmanafov/",
+    "https://www.youtube.com/@alamdarmanafov",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -132,14 +155,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+      </head>
       <meta
         name="google-site-verification"
         content="IJd1OCh-NJK06OntLoHZnRBRSaxs76r326aLETi329c"
       />
       <body className={inter.className} suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          {children}
+          <LanguageProvider>{children}</LanguageProvider>
         </ThemeProvider>
       </body>
     </html>
