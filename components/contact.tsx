@@ -1,18 +1,14 @@
 "use client";
 
-import type React from "react";
-
-import { useRef, useState } from "react";
+import { useRef } from "react";
+import Script from "next/script";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useInView } from "framer-motion";
-import { Send, Mail, Phone, MapPin, Calendar } from "lucide-react";
-import emailjs from "@emailjs/browser";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { staticData } from "@/data/static";
 
 export default function Contact() {
   const containerRef = useRef(null);
-  const formRef = useRef<HTMLFormElement>(null);
   const isInView = useInView(containerRef, { once: false, amount: 0.2 });
   const { language } = useLanguage();
 
@@ -23,55 +19,6 @@ export default function Contact() {
 
   const y1 = useTransform(scrollYProgress, [0, 1], [0, -50]);
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
-
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<
-    "idle" | "success" | "error"
-  >("idle");
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormState({
-      ...formState,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus("idle");
-
-    try {
-      await emailjs.sendForm(
-        "service_louv4fl",
-        "template_nwl3cgt",
-        formRef.current!,
-        "VbbuEz_PnOeCy2Qgo"
-      );
-
-      setSubmitStatus("success");
-      setFormState({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    } catch (error) {
-      console.error("Error sending email:", error);
-      setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <div
@@ -146,29 +93,6 @@ export default function Contact() {
                     <p className="text-gray-600">+994 10-531-01-29</p>
                   </div>
                 </motion.div>
-
-                <motion.a
-                  href="https://calendly.com/alamdarmanafov/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start space-x-4"
-                  whileHover={{ x: 5 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <div className="w-12 h-12 rounded-full bg-[#0808c1]/10 flex items-center justify-center text-[#0808c1]">
-                    <Calendar size={20} />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium text-gray-800">
-                      {language === "en" ? "Book a Call" : "Görüş Bron Et"}
-                    </h4>
-                    <p className="text-gray-600">
-                      {language === "en"
-                        ? "Schedule a 30-min consultation"
-                        : "30 dəqiqəlik konsultasiya təyin edin"}
-                    </p>
-                  </div>
-                </motion.a>
 
                 <motion.div
                   className="flex items-start space-x-4"
@@ -295,164 +219,24 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">
-                {language === "en"
-                  ? "Send Me a Message"
-                  : "Mənə Mesaj Göndərin"}
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                {language === "en" ? "Book a Call" : "Görüş Rezerv Et"}
               </h3>
+              <p className="text-gray-600 mb-6">
+                {language === "en"
+                  ? "Pick a time that works for you and let's talk about your project."
+                  : "Sizə uyğun vaxtı seçin, layihəniz haqqında danışaq."}
+              </p>
 
-              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    {language === "en" ? "Your Name" : "Adınız"}
-                  </label>
-                  <motion.div
-                    whileFocus={{ scale: 1.01 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formState.name}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0808c1]/50 focus:border-transparent"
-                      placeholder={
-                        language === "en" ? "John Doe" : "Ələmdar Manafov"
-                      }
-                      required
-                    />
-                  </motion.div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    {language === "en" ? "Your Email" : "E-poçt Ünvanınız"}
-                  </label>
-                  <motion.div
-                    whileFocus={{ scale: 1.01 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formState.email}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0808c1]/50 focus:border-transparent"
-                      placeholder={
-                        language === "en"
-                          ? "john@example.com"
-                          : "alamdar@example.com"
-                      }
-                      required
-                    />
-                  </motion.div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="subject"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    {language === "en" ? "Subject" : "Mövzu"}
-                  </label>
-                  <motion.div
-                    whileFocus={{ scale: 1.01 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      value={formState.subject}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0808c1]/50 focus:border-transparent"
-                      placeholder={
-                        language === "en"
-                          ? "What's this about?"
-                          : "Bu nə haqqındadır?"
-                      }
-                      required
-                    />
-                  </motion.div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    {language === "en" ? "Your Message" : "Mesajınız"}
-                  </label>
-                  <motion.div
-                    whileFocus={{ scale: 1.01 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formState.message}
-                      onChange={handleChange}
-                      rows={5}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0808c1]/50 focus:border-transparent"
-                      placeholder={
-                        language === "en"
-                          ? "Hello, I'd like to talk about..."
-                          : "Salam, mən ... haqqında danışmaq istəyirəm"
-                      }
-                      required
-                    />
-                  </motion.div>
-                </div>
-
-                {submitStatus === "success" && (
-                  <div className="p-4 bg-green-50 text-green-700 rounded-lg">
-                    {language === "en"
-                      ? "Message sent successfully! I'll get back to you soon."
-                      : "Mesaj uğurla göndərildi! Tezliklə sizinlə əlaqə saxlayacağam."}
-                  </div>
-                )}
-
-                {submitStatus === "error" && (
-                  <div className="p-4 bg-red-50 text-red-700 rounded-lg">
-                    {language === "en"
-                      ? "Oops! Something went wrong. Please try again later."
-                      : "Üzr istəyirik! Bir şeylər yanlış getdi. Zəhmət olmasa daha sonra yenidən cəhd edin."}
-                  </div>
-                )}
-
-                <motion.button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className={`w-full px-6 py-4 bg-[#0808c1] text-white rounded-lg font-medium flex items-center justify-center space-x-2 ${
-                    isSubmitting ? "opacity-70 cursor-not-allowed" : ""
-                  }`}
-                  whileHover={
-                    !isSubmitting
-                      ? { scale: 1.02, backgroundColor: "#0606a0" }
-                      : {}
-                  }
-                  whileTap={!isSubmitting ? { scale: 0.98 } : {}}
-                >
-                  <span>
-                    {isSubmitting
-                      ? language === "en"
-                        ? "Sending..."
-                        : "Göndərilir..."
-                      : language === "en"
-                      ? "Send Message"
-                      : "Mesaj Göndər"}
-                  </span>
-                  {!isSubmitting && <Send size={18} />}
-                </motion.button>
-              </form>
+              <Script
+                src="https://assets.calendly.com/assets/external/widget.js"
+                strategy="lazyOnload"
+              />
+              <div
+                className="calendly-inline-widget"
+                data-url="https://calendly.com/alamdarmanafov/30min"
+                style={{ minWidth: "280px", height: "630px" }}
+              />
             </div>
           </motion.div>
         </div>
