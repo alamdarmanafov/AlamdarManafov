@@ -4,7 +4,7 @@ import { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"
 import { useInView } from "framer-motion"
-import { Heart, Book, GraduationCap, Briefcase, Bike, Users, Footprints } from "lucide-react"
+import { Heart, Book, GraduationCap, Briefcase, Bike, Users, Footprints, Sparkles } from "lucide-react"
 import { useLanguage } from "@/contexts/LanguageContext"
 import { aboutData } from "@/data/about-data"
 
@@ -139,8 +139,9 @@ export default function About() {
                 </div>
               ))}
             </div>
-            <div className="mt-auto p-4 bg-[#0808c1]/5 rounded-xl">
-              <p className="text-[#0808c1] font-bold text-lg">{aboutData[language].hobbies.motto}</p>
+            <div className="flex items-center gap-2 text-[#0808c1] mt-auto">
+              <Sparkles size={20} />
+              <span className="font-medium">{aboutData[language].hobbies.motto}</span>
             </div>
           </motion.div>
         </motion.div>
