@@ -36,6 +36,15 @@ export const portfolioData = {
       category: "Services",
       link: "https://wa.me/994105310129",
       technologies: ["Consultation", "Social Media", "Business"]
+    },
+    {
+      id: "4",
+      title: "ARDIC Mebel",
+      description: "Sample portfolio website for a furniture company",
+      image: "/img/portfolio/4.svg",
+      category: "Web Design",
+      link: "/mebel",
+      technologies: ["Web Design", "Next.js", "Branding"]
     }
   ],
   az: [
@@ -65,6 +74,15 @@ export const portfolioData = {
       category: "Xidmət",
       link: "https://wa.me/994105310129",
       technologies: ["Konsultasiya", "Sosial Media", "biznes"]
+    },
+    {
+      id: "4",
+      title: "ARDIC Mebel",
+      description: "Mebel şirkəti üçün nümunə portfolio sayt",
+      image: "/img/portfolio/4.svg",
+      category: "Veb Dizayn",
+      link: "/mebel",
+      technologies: ["Veb Dizayn", "Next.js", "Brendinq"]
     }
   ]
 } 
