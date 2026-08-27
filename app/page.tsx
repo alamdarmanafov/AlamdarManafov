@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar"
 import Hero from "@/components/hero"
 import About from "@/components/about"
 import Brands from "@/components/brands"
+import Testimonials from "@/components/testimonials"
 import Podcast from "@/components/podcast"
 import BlogPreview from "@/components/blog-preview"
 import Contact from "@/components/contact"
@@ -54,6 +55,10 @@ export default function Home() {
 
       <section id="brands" className="relative">
         <Brands />
+      </section>
+
+      <section id="testimonials" className="relative">
+        <Testimonials />
       </section>
 
       <section id="podcast" ref={podcastRef} className="relative">
