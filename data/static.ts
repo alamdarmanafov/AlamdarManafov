@@ -5,7 +5,6 @@ export const staticData = {
       about: "About",
       portfolio: "Portfolio",
       podcast: "Podcast",
-      blog: "Blog",
       contact: "Contact"
     },
     hero: {
@@ -24,7 +23,6 @@ export const staticData = {
       about: "Haqqımda",
       portfolio: "Portfolio",
       podcast: "Podcast",
-      blog: "Bloq",
       contact: "Əlaqə"
     },
     hero: {
