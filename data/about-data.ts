@@ -9,7 +9,7 @@ export const aboutData = {
     },
     career: {
       title: "Professional Career",
-      description: "Business Developer / Marketing Consultant with 10+ years of experience, and founder of Be Positive. Alamdar has worked with singers, actors, entrepreneurs, and companies across industries, specializing in marketing strategy, branding, social media management, and content planning.",
+      description: "Business Developer / Marketing Consultant with 10+ years of experience, and founder of Be Positive. Alamdar has worked with singers, actors, entrepreneurs, business partners, bloggers, and companies across industries, specializing in marketing strategy, branding, social media management, and content planning.",
       company: "Be Positive"
     },
     books: {
@@ -37,7 +37,7 @@ export const aboutData = {
     },
     career: {
       title: "Peşəkar Karyera",
-      description: "10+ illik təcrübəyə malik Business Developer / Marketing Consultant və Be Positive-in təsisçisi. Ələmdar müğənnilər, aktyorlar, sahibkarlar və müxtəlif sahələrdən şirkətlərlə əməkdaşlıq edib, marketinq strategiyası, brendinq, sosial media idarəetməsi və kontent planlaşdırması üzrə ixtisaslaşıb.",
+      description: "10+ illik təcrübəyə malik Business Developer / Marketing Consultant və Be Positive-in təsisçisi. Ələmdar müğənnilər, aktyorlar, sahibkarlar, biznes tərəfdaşları, bloggerlər və müxtəlif sahələrdən şirkətlərlə əməkdaşlıq edib, marketinq strategiyası, brendinq, sosial media idarəetməsi və kontent planlaşdırması üzrə ixtisaslaşıb.",
       company: "Be Positive"
     },
     books: {
