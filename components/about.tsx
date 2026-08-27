@@ -65,7 +65,7 @@ export default function About() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -73,15 +73,15 @@ export default function About() {
         >
           {/* Ana Bilgi Kartı */}
           <motion.div
-            className="bg-white rounded-2xl shadow-xl p-8 relative overflow-hidden"
+            className="bg-white rounded-2xl shadow-xl p-8 relative overflow-hidden h-full flex flex-col"
             variants={itemVariants}
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#0808c1]/5 rounded-full -mr-16 -mt-16" />
             <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#fff45c]/20 rounded-full -ml-12 -mb-12" />
             
             <h3 className="text-2xl font-bold text-[#0808c1] mb-4">{aboutData[language].mainInfo.name}</h3>
-            <p className="text-gray-600 mb-6">{aboutData[language].mainInfo.description}</p>
-            <div className="flex items-center gap-2 text-[#0808c1]">
+            <p className="text-gray-600 mb-6 flex-grow">{aboutData[language].mainInfo.description}</p>
+            <div className="flex items-center gap-2 text-[#0808c1] mt-auto">
               <GraduationCap size={20} />
               <span className="font-medium">{aboutData[language].mainInfo.education}</span>
             </div>
@@ -89,15 +89,15 @@ export default function About() {
 
           {/* Kariyer Kartı */}
           <motion.div
-            className="bg-white rounded-2xl shadow-xl p-8 relative overflow-hidden"
+            className="bg-white rounded-2xl shadow-xl p-8 relative overflow-hidden h-full flex flex-col"
             variants={itemVariants}
           >
             <div className="absolute top-0 left-0 w-32 h-32 bg-[#fff45c]/20 rounded-full -ml-16 -mt-16" />
             <div className="absolute bottom-0 right-0 w-24 h-24 bg-[#0808c1]/5 rounded-full -mr-12 -mb-12" />
             
             <h3 className="text-2xl font-bold text-[#0808c1] mb-4">{aboutData[language].career.title}</h3>
-            <p className="text-gray-600 mb-6">{aboutData[language].career.description}</p>
-            <div className="flex items-center gap-2 text-[#0808c1]">
+            <p className="text-gray-600 mb-6 flex-grow">{aboutData[language].career.description}</p>
+            <div className="flex items-center gap-2 text-[#0808c1] mt-auto">
               <Briefcase size={20} />
               <span className="font-medium">{aboutData[language].career.company}</span>
             </div>
@@ -105,15 +105,15 @@ export default function About() {
 
           {/* Kitab ve Başarılar Kartı */}
           <motion.div
-            className="bg-white rounded-2xl shadow-xl p-8 relative overflow-hidden"
+            className="bg-white rounded-2xl shadow-xl p-8 relative overflow-hidden h-full flex flex-col"
             variants={itemVariants}
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#0808c1]/5 rounded-full -mr-16 -mt-16" />
             <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#fff45c]/20 rounded-full -ml-12 -mb-12" />
             
             <h3 className="text-2xl font-bold text-[#0808c1] mb-4">{aboutData[language].books.title}</h3>
-            <p className="text-gray-600 mb-6">{aboutData[language].books.description}</p>
-            <div className="flex items-center gap-2 text-[#0808c1]">
+            <p className="text-gray-600 mb-6 flex-grow">{aboutData[language].books.description}</p>
+            <div className="flex items-center gap-2 text-[#0808c1] mt-auto">
               <Book size={20} />
               <span className="font-medium">{aboutData[language].books.role}</span>
             </div>
@@ -121,14 +121,14 @@ export default function About() {
 
           {/* Hobbilər və Həyat Şüarı Kartı */}
           <motion.div
-            className="bg-white rounded-2xl shadow-xl p-8 relative overflow-hidden"
+            className="bg-white rounded-2xl shadow-xl p-8 relative overflow-hidden h-full flex flex-col"
             variants={itemVariants}
           >
             <div className="absolute top-0 left-0 w-32 h-32 bg-[#fff45c]/20 rounded-full -ml-16 -mt-16" />
             <div className="absolute bottom-0 right-0 w-24 h-24 bg-[#0808c1]/5 rounded-full -mr-12 -mb-12" />
             
             <h3 className="text-2xl font-bold text-[#0808c1] mb-4">{aboutData[language].hobbies.title}</h3>
-            <div className="space-y-4">
+            <div className="space-y-4 flex-grow">
               {aboutData[language].hobbies.activities.map((activity, index) => (
                 <div key={index} className="flex items-center gap-3">
                   {activity.icon === 'bike' && <Bike size={20} className="text-[#0808c1]" />}
@@ -139,7 +139,7 @@ export default function About() {
                 </div>
               ))}
             </div>
-            <div className="mt-6 p-4 bg-[#0808c1]/5 rounded-xl">
+            <div className="mt-auto p-4 bg-[#0808c1]/5 rounded-xl">
               <p className="text-[#0808c1] font-bold text-lg">{aboutData[language].hobbies.motto}</p>
             </div>
           </motion.div>
