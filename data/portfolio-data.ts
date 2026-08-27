@@ -22,11 +22,11 @@ export const portfolioData = {
     {
       id: "2",
       title: "Be Positive Life Planner",
-      description: "Plan your day.Stay focused.Feel positive.",
+      description: "Plan your day. Stay focused. Feel positive. Now with gamified challenges for students.",
       image: "/img/portfolio/2.svg",
       category: "SaaS",
       link: "https://bepositive.cc",
-      technologies: ["SaaS", "Planner", "Productivity"]
+      technologies: ["SaaS", "Planner", "Productivity", "Gamification"]
     },
     {
       id: "3",
@@ -51,11 +51,11 @@ export const portfolioData = {
     {
       id: "2",
       title: "Be Positive Life Planner",
-      description: "Plan your day.Stay focused.Feel positive.",
+      description: "Gününü planlaşdır. Fokuslan. Pozitiv qal. İndi şagirdlər üçün oyunlaşdırma (gamification) sistemi ilə.",
       image: "/img/portfolio/2.svg",
       category: "SaaS",
       link: "https://bepositive.cc",
-      technologies: ["SaaS", "Planner", "Productivity"]
+      technologies: ["SaaS", "Planner", "Productivity", "Gamification"]
     },
     {
       id: "3",
