@@ -70,12 +70,12 @@ export default function Contact() {
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="w-12 h-12 rounded-full bg-[#0808c1]/10 flex items-center justify-center text-[#0808c1]">
+                  <div className="w-12 h-12 shrink-0 rounded-full bg-[#0808c1]/10 flex items-center justify-center text-[#0808c1]">
                     <Mail size={20} />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="text-lg font-medium text-gray-800">Email</h4>
-                    <p className="text-gray-600">alamdar.manafov@bepositive.az</p>
+                    <p className="text-gray-600 break-all">alamdar.manafov@bepositive.az</p>
                   </div>
                 </motion.div>
 
@@ -84,10 +84,10 @@ export default function Contact() {
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="w-12 h-12 rounded-full bg-[#0808c1]/10 flex items-center justify-center text-[#0808c1]">
+                  <div className="w-12 h-12 shrink-0 rounded-full bg-[#0808c1]/10 flex items-center justify-center text-[#0808c1]">
                     <Phone size={20} />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="text-lg font-medium text-gray-800">
                       {language === "en" ? "Phone" : "Telefon"}
                     </h4>
@@ -100,10 +100,10 @@ export default function Contact() {
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="w-12 h-12 rounded-full bg-[#0808c1]/10 flex items-center justify-center text-[#0808c1]">
+                  <div className="w-12 h-12 shrink-0 rounded-full bg-[#0808c1]/10 flex items-center justify-center text-[#0808c1]">
                     <MapPin size={20} />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="text-lg font-medium text-gray-800">
                       {language === "en" ? "Location" : "Ünvan"}
                     </h4>
