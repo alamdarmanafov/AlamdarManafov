@@ -129,10 +129,9 @@ MIT Lisenziyası - Ətraflı məlumat üçün [LICENSE](LICENSE) faylına baxın
 
 ## 👥 Əlaqə
 
-- 🌐 Veb sayt: [alamder.com](https://alamder.com)
-- 📧 Email: alamder@example.com
-- 💼 LinkedIn: [Alamder](https://linkedin.com/in/alamder)
-- 🐦 Twitter: [@alamder](https://twitter.com/alamder)
+- 🌐 Veb sayt: [alamdarmanafov.com](https://alamder.com)
+- 📧 Email: alamder.manafov@bepositive.az
+- 💼 LinkedIn: [Alamder](https://www.linkedin.com/in/alamdarmanafov/)
 
 ## 🙏 Təşəkkürlər
 
