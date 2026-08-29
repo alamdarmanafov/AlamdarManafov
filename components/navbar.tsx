@@ -5,6 +5,7 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { AnimatePresence } from "framer-motion"
 import Logo from "@/public/img/Logo_Blue.png"
@@ -25,7 +26,13 @@ export default function Navbar({ sections, scrollY }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("home")
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false)
-  const { language, setLanguage } = useLanguage()
+  const { language } = useLanguage()
+  const router = useRouter()
+
+  const switchLanguage = (lang: "en" | "az") => {
+    router.push(`/${lang}`)
+    setIsLanguageMenuOpen(false)
+  }
 
   useEffect(() => {
     setMounted(true)
@@ -84,7 +91,7 @@ export default function Navbar({ sections, scrollY }: NavbarProps) {
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
-          <Link href="/">
+          <Link href={`/${language}`}>
             <Image
               src={Logo}
               alt="Logo"
@@ -146,10 +153,7 @@ export default function Navbar({ sections, scrollY }: NavbarProps) {
                   className="absolute right-0 mt-2 w-40 bg-white/95 backdrop-blur-md rounded-2xl shadow-lg py-2 z-50 border border-gray-100"
                 >
                   <button
-                    onClick={() => {
-                      setLanguage('en')
-                      setIsLanguageMenuOpen(false)
-                    }}
+                    onClick={() => switchLanguage('en')}
                     className="w-full flex items-center space-x-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50/80 transition-colors duration-200"
                   >
                     <div className="w-5 h-5 rounded-full overflow-hidden ring-1 ring-gray-100">
@@ -165,10 +169,7 @@ export default function Navbar({ sections, scrollY }: NavbarProps) {
                   </button>
                   <div className="h-px bg-gray-100 my-1" />
                   <button
-                    onClick={() => {
-                      setLanguage('az')
-                      setIsLanguageMenuOpen(false)
-                    }}
+                    onClick={() => switchLanguage('az')}
                     className="w-full flex items-center space-x-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50/80 transition-colors duration-200"
                   >
                     <div className="w-5 h-5 rounded-full overflow-hidden ring-1 ring-gray-100">
@@ -217,10 +218,7 @@ export default function Navbar({ sections, scrollY }: NavbarProps) {
                   className="absolute right-0 mt-2 w-40 bg-white/95 backdrop-blur-md rounded-2xl shadow-lg py-2 z-50 border border-gray-100"
                 >
                   <button
-                    onClick={() => {
-                      setLanguage('en')
-                      setIsLanguageMenuOpen(false)
-                    }}
+                    onClick={() => switchLanguage('en')}
                     className="w-full flex items-center space-x-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50/80 transition-colors duration-200"
                   >
                     <div className="w-5 h-5 rounded-full overflow-hidden ring-1 ring-gray-100">
@@ -236,10 +234,7 @@ export default function Navbar({ sections, scrollY }: NavbarProps) {
                   </button>
                   <div className="h-px bg-gray-100 my-1" />
                   <button
-                    onClick={() => {
-                      setLanguage('az')
-                      setIsLanguageMenuOpen(false)
-                    }}
+                    onClick={() => switchLanguage('az')}
                     className="w-full flex items-center space-x-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50/80 transition-colors duration-200"
                   >
                     <div className="w-5 h-5 rounded-full overflow-hidden ring-1 ring-gray-100">

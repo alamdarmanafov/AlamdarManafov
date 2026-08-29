@@ -2,6 +2,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { useTypewriter, Cursor } from "react-simple-typewriter"
+import { Globe2 } from "lucide-react"
 import Person from "@/public/img/AlemdarManafovPerson.jpg"
 import { useLanguage } from "@/contexts/LanguageContext"
 import { staticData } from "@/data/static"
@@ -63,6 +64,17 @@ export default function Hero() {
           >
             {staticData[language].hero.description}
           </motion.p>
+
+          <motion.button
+            onClick={handleConsultationClick}
+            className="flex items-center gap-2 max-w-md text-left bg-[#0808c1]/5 border border-[#0808c1]/15 rounded-full pl-3 pr-4 py-2 text-sm text-[#0808c1] hover:bg-[#0808c1]/10 transition-colors"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.7, duration: 0.8 }}
+          >
+            <Globe2 size={18} className="shrink-0" />
+            <span className="font-medium">{staticData[language].hero.marketEntry}</span>
+          </motion.button>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

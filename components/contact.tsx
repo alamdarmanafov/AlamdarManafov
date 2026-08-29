@@ -70,12 +70,12 @@ export default function Contact() {
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="w-12 h-12 rounded-full bg-[#0808c1]/10 flex items-center justify-center text-[#0808c1]">
+                  <div className="w-12 h-12 shrink-0 rounded-full bg-[#0808c1]/10 flex items-center justify-center text-[#0808c1]">
                     <Mail size={20} />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="text-lg font-medium text-gray-800">Email</h4>
-                    <p className="text-gray-600">alamdar.manafov@bepositive.az</p>
+                    <p className="text-gray-600 break-all">alamdar.manafov@bepositive.az</p>
                   </div>
                 </motion.div>
 
@@ -84,10 +84,10 @@ export default function Contact() {
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="w-12 h-12 rounded-full bg-[#0808c1]/10 flex items-center justify-center text-[#0808c1]">
+                  <div className="w-12 h-12 shrink-0 rounded-full bg-[#0808c1]/10 flex items-center justify-center text-[#0808c1]">
                     <Phone size={20} />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="text-lg font-medium text-gray-800">
                       {language === "en" ? "Phone" : "Telefon"}
                     </h4>
@@ -100,10 +100,10 @@ export default function Contact() {
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="w-12 h-12 rounded-full bg-[#0808c1]/10 flex items-center justify-center text-[#0808c1]">
+                  <div className="w-12 h-12 shrink-0 rounded-full bg-[#0808c1]/10 flex items-center justify-center text-[#0808c1]">
                     <MapPin size={20} />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="text-lg font-medium text-gray-800">
                       {language === "en" ? "Location" : "Ünvan"}
                     </h4>
@@ -122,6 +122,9 @@ export default function Contact() {
                 <div className="flex space-x-4">
                   <motion.a
                     href="https://www.linkedin.com/in/alamdarmanafov/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
                     className="w-10 h-10 rounded-full bg-[#0808c1] flex items-center justify-center text-white"
                     whileHover={{ scale: 1.1, backgroundColor: "#0606a0" }}
                     whileTap={{ scale: 0.95 }}
@@ -144,6 +147,9 @@ export default function Contact() {
                   </motion.a>
                   <motion.a
                     href="https://www.facebook.com/alamdarmanafov/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
                     className="w-10 h-10 rounded-full bg-[#0808c1] flex items-center justify-center text-white"
                     whileHover={{ scale: 1.1, backgroundColor: "#0606a0" }}
                     whileTap={{ scale: 0.95 }}
@@ -161,6 +167,9 @@ export default function Contact() {
 
                   <motion.a
                     href="https://www.instagram.com/alamdarmanafov/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
                     className="w-10 h-10 rounded-full bg-[#0808c1] flex items-center justify-center text-white"
                     whileHover={{ scale: 1.1, backgroundColor: "#0606a0" }}
                     whileTap={{ scale: 0.95 }}
@@ -190,6 +199,9 @@ export default function Contact() {
                   </motion.a>
                   <motion.a
                     href="https://www.youtube.com/@alamdarmanafov"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
                     className="w-10 h-10 rounded-full bg-[#0808c1] flex items-center justify-center text-white"
                     whileHover={{ scale: 1.1, backgroundColor: "#0606a0" }}
                     whileTap={{ scale: 0.95 }}

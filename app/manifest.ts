@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: "Alamdar Manafov",
     description:
       "Portfolio of Alamdar Manafov - 10+ years Business Developer & Marketing Consultant | Founder of Be Positive Life Planner.",
-    start_url: "/",
+    start_url: "/en",
     display: "standalone",
     background_color: "#ffffff",
     theme_color: "#0808c1",

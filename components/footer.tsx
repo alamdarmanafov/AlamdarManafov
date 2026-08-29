@@ -19,7 +19,7 @@ export default function Footer() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <Link href="/">
+            <Link href={`/${language}`}>
               <Image
                 src={Logo}
                 alt="Logo"
@@ -42,6 +42,9 @@ export default function Footer() {
           >
             <motion.a
               href="https://www.linkedin.com/in/alamdarmanafov/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
               className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600"
               whileHover={{
                 scale: 1.1,
@@ -68,6 +71,9 @@ export default function Footer() {
             </motion.a>
             <motion.a
               href="https://www.facebook.com/alamdarmanafov/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
               className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600"
               whileHover={{
                 scale: 1.1,
@@ -88,6 +94,9 @@ export default function Footer() {
             </motion.a>
             <motion.a
               href="https://www.instagram.com/alamdarmanafov/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
               className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600"
               whileHover={{
                 scale: 1.1,
@@ -114,6 +123,9 @@ export default function Footer() {
             </motion.a>
             <motion.a
               href="https://www.youtube.com/@alamdarmanafov"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
               className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600"
               whileHover={{
                 scale: 1.1,
@@ -148,7 +160,11 @@ export default function Footer() {
         >
           <p>
             {staticData[language].footer.social}{" "}
-            <a href="https://ilkin.software" target="_blank">
+            <a
+              href="https://ilkin.software"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               1lkin13
             </a>
           </p>
