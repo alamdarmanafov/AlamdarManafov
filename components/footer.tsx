@@ -19,7 +19,7 @@ export default function Footer() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <Link href="/">
+            <Link href={`/${language}`}>
               <Image
                 src={Logo}
                 alt="Logo"
