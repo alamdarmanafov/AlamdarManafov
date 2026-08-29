@@ -8,6 +8,10 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.alamdarmanafov.com"),
+  alternates: {
+    canonical: "https://www.alamdarmanafov.com",
+  },
   title: "Alamdar Manafov | Business Developer & Marketing Consultant",
   description:
     "Portfolio of Alamdar Manafov - 10+ years Business Developer & Marketing Consultant | Founder of Be Positive Life Planner.",
@@ -92,7 +96,7 @@ export const metadata: Metadata = {
     title: "Alamdar Manafov | Business Developer & Marketing Consultant",
     description:
       "Portfolio of Alamdar Manafov - 10+ years Business Developer & Marketing Consultant | Founder of Be Positive Life Planner.",
-    url: "https://alamdarmanafov.com",
+    url: "https://www.alamdarmanafov.com",
     siteName: "Alamdar Manafov Portfolio",
     images: [
       {
@@ -125,8 +129,8 @@ const personJsonLd = {
   "@type": "Person",
   name: "Alamdar Manafov",
   alternateName: "Ələmdar Manafov",
-  url: "https://alamdarmanafov.com",
-  image: "https://alamdarmanafov.com/img/AlemdarManafovPerson.jpg",
+  url: "https://www.alamdarmanafov.com",
+  image: "https://www.alamdarmanafov.com/img/AlemdarManafovPerson.jpg",
   jobTitle: "Business Developer & Marketing Consultant",
   description:
     "Business Developer & Marketing Consultant with 10+ years of experience. Founder of Be Positive.",

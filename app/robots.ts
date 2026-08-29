@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://alamdarmanafov.com/sitemap.xml",
+    sitemap: "https://www.alamdarmanafov.com/sitemap.xml",
   }
 }
