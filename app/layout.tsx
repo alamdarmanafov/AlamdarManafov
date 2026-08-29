@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   title: "Alamdar Manafov | Business Developer & Marketing Consultant",
   description:
-    "Portfolio of Alamdar Manafov - 10+ years Business Developer & Marketing Consultant | Founder of Be Positive Life Planner.",
+    "Portfolio of Alamdar Manafov - 10+ years Business Developer & Marketing Consultant | Founder of Be Positive Life Planner. Helping foreign companies enter and grow in the Azerbaijan market.",
   keywords: [
     "Alamdar Manafov",
     "Ələmdar Manafov",
@@ -90,6 +90,11 @@ export const metadata: Metadata = {
     "digital advertising training",
     "Azerbaijani marketing expert",
     "international marketing consultant",
+    "Azerbaijan market entry consultant",
+    "business consultant for foreign investors in Azerbaijan",
+    "expanding business to Azerbaijan",
+    "market entry strategy Azerbaijan",
+    "Baku business consultant",
   ],
 
   openGraph: {
