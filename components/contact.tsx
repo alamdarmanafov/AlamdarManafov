@@ -122,6 +122,9 @@ export default function Contact() {
                 <div className="flex space-x-4">
                   <motion.a
                     href="https://www.linkedin.com/in/alamdarmanafov/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
                     className="w-10 h-10 rounded-full bg-[#0808c1] flex items-center justify-center text-white"
                     whileHover={{ scale: 1.1, backgroundColor: "#0606a0" }}
                     whileTap={{ scale: 0.95 }}
@@ -144,6 +147,9 @@ export default function Contact() {
                   </motion.a>
                   <motion.a
                     href="https://www.facebook.com/alamdarmanafov/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
                     className="w-10 h-10 rounded-full bg-[#0808c1] flex items-center justify-center text-white"
                     whileHover={{ scale: 1.1, backgroundColor: "#0606a0" }}
                     whileTap={{ scale: 0.95 }}
@@ -161,6 +167,9 @@ export default function Contact() {
 
                   <motion.a
                     href="https://www.instagram.com/alamdarmanafov/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
                     className="w-10 h-10 rounded-full bg-[#0808c1] flex items-center justify-center text-white"
                     whileHover={{ scale: 1.1, backgroundColor: "#0606a0" }}
                     whileTap={{ scale: 0.95 }}
@@ -190,6 +199,9 @@ export default function Contact() {
                   </motion.a>
                   <motion.a
                     href="https://www.youtube.com/@alamdarmanafov"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
                     className="w-10 h-10 rounded-full bg-[#0808c1] flex items-center justify-center text-white"
                     whileHover={{ scale: 1.1, backgroundColor: "#0606a0" }}
                     whileTap={{ scale: 0.95 }}

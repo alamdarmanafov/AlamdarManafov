@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.alamdarmanafov.com",
   },
+  verification: {
+    google: "IJd1OCh-NJK06OntLoHZnRBRSaxs76r326aLETi329c",
+  },
   title: "Alamdar Manafov | Business Developer & Marketing Consultant",
   description:
     "Portfolio of Alamdar Manafov - 10+ years Business Developer & Marketing Consultant | Founder of Be Positive Life Planner. Helping foreign companies enter and grow in the Azerbaijan market.",
@@ -170,10 +173,6 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
       </head>
-      <meta
-        name="google-site-verification"
-        content="IJd1OCh-NJK06OntLoHZnRBRSaxs76r326aLETi329c"
-      />
       <body className={inter.className} suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <LanguageProvider>{children}</LanguageProvider>
