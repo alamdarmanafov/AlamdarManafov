@@ -1,6 +1,6 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { redirect } from "next/navigation";
 import { Inter } from "next/font/google";
 import "../globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -114,7 +114,7 @@ export default async function LocaleLayout({
 }>) {
   const { locale: rawLocale } = await params;
   if (!(locales as string[]).includes(rawLocale)) {
-    notFound();
+    redirect("/en");
   }
   const locale = rawLocale as Locale;
 
