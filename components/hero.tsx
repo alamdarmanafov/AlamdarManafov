@@ -137,7 +137,7 @@ export default function Hero() {
               src={Person}
               alt={language === 'en' ? 'Alamdar Manafov' : 'Ələmdar Manafov'}
               fill
-              className="object-cover"
+              className="object-cover object-[center_25%]"
               priority
             />
           </motion.div>
