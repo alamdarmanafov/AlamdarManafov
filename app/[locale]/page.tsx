@@ -7,7 +7,6 @@ import About from "@/components/about"
 import Services from "@/components/services"
 import Brands from "@/components/brands"
 import Testimonials from "@/components/testimonials"
-import Podcast from "@/components/podcast"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import ParticleBackground from "@/components/particle-background"
@@ -27,7 +26,6 @@ export default function Home() {
 
   const aboutRef = useRef<HTMLElement | null>(null)
   const servicesRef = useRef<HTMLElement | null>(null)
-  const podcastRef = useRef<HTMLElement | null>(null)
   const contactRef = useRef<HTMLElement | null>(null)
   const portfolioRef = useRef<HTMLElement | null>(null)
 
@@ -35,7 +33,6 @@ export default function Home() {
     { id: "home", label: "Ana səhifə", ref: null },
     { id: "about", label: "Haqqımda", ref: aboutRef },
     { id: "services", label: "Xidmətlər", ref: servicesRef },
-    { id: "podcast", label: "Podkastlar", ref: podcastRef },
     { id: "portfolio", label: "Portfolio", ref: portfolioRef },
     { id: "contact", label: "Əlaqə", ref: contactRef },
   ]
@@ -63,10 +60,6 @@ export default function Home() {
 
       <section id="testimonials" className="relative">
         <Testimonials />
-      </section>
-
-      <section id="podcast" ref={podcastRef} className="relative">
-        <Podcast />
       </section>
 
       <section id="portfolio" ref={portfolioRef} className="relative">
