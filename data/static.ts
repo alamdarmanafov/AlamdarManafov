@@ -3,6 +3,7 @@ export const staticData = {
     nav: {
       home: "Home",
       about: "About",
+      services: "Services",
       portfolio: "Portfolio",
       podcast: "Podcast",
       contact: "Contact"
@@ -22,6 +23,7 @@ export const staticData = {
     nav: {
       home: "Ana Səhifə",
       about: "Haqqımda",
+      services: "Xidmətlər",
       portfolio: "Portfolio",
       podcast: "Podcast",
       contact: "Əlaqə"
