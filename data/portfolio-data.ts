@@ -30,12 +30,12 @@ export const portfolioData = {
     },
     {
       id: "3",
-      title: "Consultation",
-      description: "Business and Marketing consultation services",
-      image: "/img/portfolio/3.jpg",
-      category: "Services",
-      link: "https://wa.me/994105310129",
-      technologies: ["Consultation", "Social Media", "Business"]
+      title: "Cheap Market",
+      description: "Price comparison app that finds the cheapest grocery market near you",
+      image: "/img/portfolio/cheapmarket.jpg",
+      category: "E-commerce",
+      link: "https://cheapmarket.az",
+      technologies: ["E-commerce", "Mobile App", "Price Comparison"]
     }
   ],
   az: [
@@ -59,12 +59,12 @@ export const portfolioData = {
     },
     {
       id: "3",
-      title: "Konsultasiya",
-      description: "Biznes və Marketinq üzrə konsultasiya xidmətləri",
-      image: "/img/portfolio/3.jpg",
-      category: "Xidmət",
-      link: "https://wa.me/994105310129",
-      technologies: ["Konsultasiya", "Sosial Media", "biznes"]
+      title: "Cheap Market",
+      description: "Marketlər arasında qiymətləri müqayisə edib ən sərfəli variantı tapan tətbiq",
+      image: "/img/portfolio/cheapmarket.jpg",
+      category: "E-ticarət",
+      link: "https://cheapmarket.az",
+      technologies: ["E-ticarət", "Mobil Tətbiq", "Qiymət Müqayisəsi"]
     }
   ]
 } 
