@@ -23,7 +23,7 @@ export const portfolioData = {
       id: "2",
       title: "Be Positive Life Planner",
       description: "Plan your day.Stay focused.Feel positive.",
-      image: "/img/portfolio/2.svg",
+      image: "/img/portfolio/bepositive-life-planner.jpg",
       category: "SaaS",
       link: "https://bepositive.cc",
       technologies: ["SaaS", "Planner", "Productivity"]
@@ -52,7 +52,7 @@ export const portfolioData = {
       id: "2",
       title: "Be Positive Life Planner",
       description: "Plan your day.Stay focused.Feel positive.",
-      image: "/img/portfolio/2.svg",
+      image: "/img/portfolio/bepositive-life-planner.jpg",
       category: "SaaS",
       link: "https://bepositive.cc",
       technologies: ["SaaS", "Planner", "Productivity"]
